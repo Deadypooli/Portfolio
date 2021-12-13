@@ -1,3 +1,4 @@
+
 .gallery-container {
 	width: 100%;
 	display: flex;
@@ -28,6 +29,6 @@
 }
 
 .gallery-img:hover {
-	transform: translate(0, -1.5px);
-	box-shadow: 0 0.938em 2.188em rgba(50,50,93,.1), 0 0.313em 0.938em rgba(0,0,0,.07);
+	transform: scale(1.01);
+	box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
 }

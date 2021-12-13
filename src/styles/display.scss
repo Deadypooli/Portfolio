@@ -1,5 +1,5 @@
 .display-backdrop {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -19,4 +19,5 @@
 	max-width: 100%;
 	background-size: cover;
 	background-position: center;
+	box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
 }

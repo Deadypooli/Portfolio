@@ -2,6 +2,7 @@
   <router-view/>
 </template>
 
+
 <style>
 @font-face {
   font-family: "BebasNeue";

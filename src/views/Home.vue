@@ -1,8 +1,8 @@
 <template>
-  <div class="hero-body">
+  <Header/>
+  <div class="hero-container">
     <img src="../assets/fall.png" class="hero-img">
   </div>
-  <Header/>
 </template>
 
 <script>

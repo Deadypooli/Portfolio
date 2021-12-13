@@ -38,7 +38,6 @@
 				v-on:click="toggleModal">
 			</div>
 		</div>
-
 	</section>
 </template>
 
