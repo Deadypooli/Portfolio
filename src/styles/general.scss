@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+body {
+	font-family: 'BebasNeue', Helvetica, Arial;
+	font-size: 20px;
+	margin: 0;
+	background: linear-gradient(90deg, rgba(144,219,255,1) 0%, rgba(254,202,179,1) 100%);
+}
