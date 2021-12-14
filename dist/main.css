@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "BebasNeue", Helvetica, Arial;
+  font-size: 20px;
+  margin: 0;
+  background: #181818;
+  background-image: linear-gradient(90deg, #90dbff 0%, #fecab3 100%);
+}
+
+.display-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 64px;
+  background-color: rgba(25, 25, 46, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.display-img {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
+}
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-grid {
+  margin: 96px 48px;
+  max-width: 1366px;
+  display: grid;
+  align-items: start;
+  columns: 3;
+  grid-column-gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 24px;
+}
+
+.gallery-img {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.header-items {
+  padding: 20px;
+  width: 100vw;
+  max-width: 1366px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-item {
+  padding: 5px;
+}
+
+.header-item:hover {
+  cursor: pointer;
+}
+
+.home-icon {
+  display: block;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.hero-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*# sourceMappingURL=main.css.map */
