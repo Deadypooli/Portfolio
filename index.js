@@ -5,5 +5,9 @@ app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
 const port = process.env.PORT || 80;
 app.listen(port);
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
