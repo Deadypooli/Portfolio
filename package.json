@@ -17,8 +17,7 @@
     "vue-router": "^4.0.12",
     "watch": "^1.0.2",
     "express":"*",
-    "body-parser":"*",
-    "bcrypt": "^0.8.5"
+    "body-parser":"*"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
