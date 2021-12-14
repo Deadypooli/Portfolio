@@ -46,7 +46,7 @@ body {
 }
 
 .gallery-grid {
-  margin: 64px 48px;
+  margin: 96px 48px;
   max-width: 1366px;
   display: grid;
   align-items: start;
