@@ -4,7 +4,7 @@
 			<a href="/">
 				<img src="../assets/logo.png" class="header-item home-icon">
 			</a>
-			<a href="/gallery">
+			<a href="/#gallery">
 				<div class="header-item">
 					Gallery
 				</div>
