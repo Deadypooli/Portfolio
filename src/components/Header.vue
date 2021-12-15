@@ -9,12 +9,7 @@
 					Gallery
 				</div>
 			</a>
-			<div class="header-item">
-				Concept Art
-			</div>
-			<div class="header-item">
-				Illustration
-			</div>
+			<!-- <i class="fab fa-instagram"></i> -->
 		</div>
 	</header>
 </template>

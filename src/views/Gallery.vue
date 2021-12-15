@@ -37,6 +37,16 @@
 				<img src="../assets/cat.jpg" class="gallery-img"
 				v-on:click="toggleModal">
 			</div>
+			<div class="gallery-column"
+			v-for="imagelist in splicedImages"
+			:key="imagelist">
+				<img 
+				class="gallery-img"
+				v-for="key in imagelist" 
+				:key="key" 
+				v-bind:src="key" 
+				v-on:click="toggleModal">
+			</div>
 		</div>
 	</section>
 </template>
@@ -51,8 +61,31 @@ export default {
 	name: 'Gallery',
 	data () {
 		return {
-			clicked: false
+			clicked: false,
+			images: [
+				"../assets/christmas-jump.jpg",
+				"../assets/lola.png",
+				"../assets/fall.png",
+				"../assets/mercy_gala.png",
+				"../assets/winfa.jpg",
+				"../assets/catyatta.png",
+				"../assets/hotter.png",
+				"../assets/lily.png",
+				"../assets/tree.jpg",
+				"../assets/punch.png",
+				"../assets/heart.jpg",
+				"../assets/cat.jpg",
+				"../assets/spiderverse.jpg"
+			],
+			splicedImages: []
 		}
+	},
+	beforeMount () {
+		var splicer = Math.ceil(this.images.length / 3);
+		this.splicedImages[0] = this.images.splice(-splicer);
+		this.splicedImages[1] = this.images.splice(-splicer);
+		this.splicedImages[2] = this.images;
+
 	},
 	methods: {
 		toggleModal () {
