@@ -1,42 +1,11 @@
 <template>
 	<Header/>
 	<Display
+	:selectedImage="selectedImage"
 	v-if="clicked"
 	@clicked="toggleModal"/>
     <section class="gallery-container">
 		<div class="gallery-grid">
-			<div class="gallery-column">
-				<img src="../assets/christmas-jump.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/mercy_gala.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/hotter.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/punch.png" class="gallery-img"
-				v-on:click="toggleModal">
-			</div>
-			<div class="gallery-column">
-				<img src="../assets/lola.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/winfa.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/lily.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/heart.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/spiderverse.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-			</div>
-			<div class="gallery-column">
-				<img src="../assets/fall.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/catyatta.png" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/tree.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-				<img src="../assets/cat.jpg" class="gallery-img"
-				v-on:click="toggleModal">
-			</div>
 			<div class="gallery-column"
 			v-for="imagelist in splicedImages"
 			:key="imagelist">
@@ -45,7 +14,7 @@
 				v-for="key in imagelist" 
 				:key="key" 
 				v-bind:src="key" 
-				v-on:click="toggleModal">
+				v-on:click="toggleModal(key)">
 			</div>
 		</div>
 	</section>
@@ -63,21 +32,22 @@ export default {
 		return {
 			clicked: false,
 			images: [
-				"../assets/christmas-jump.jpg",
-				"../assets/lola.png",
-				"../assets/fall.png",
-				"../assets/mercy_gala.png",
-				"../assets/winfa.jpg",
-				"../assets/catyatta.png",
-				"../assets/hotter.png",
-				"../assets/lily.png",
-				"../assets/tree.jpg",
-				"../assets/punch.png",
-				"../assets/heart.jpg",
-				"../assets/cat.jpg",
-				"../assets/spiderverse.jpg"
+				require('@/assets/christmas-jump.jpg'),
+				require('@/assets/cat.jpg'),
+				require('@/assets/punch.png'),
+				require('@/assets/lola.png'),
+				require('@/assets/catyatta.png'),
+				require('@/assets/lily.png'),
+				require('@/assets/tree.jpg'),
+				require('@/assets/hotter.png'),
+				require('@/assets/fall.png'),
+				require('@/assets/mercy_gala.png'),
+				require('@/assets/winfa.jpg'),
+				require('@/assets/spiderverse.jpg'),
+				require('@/assets/heart.jpg'),
 			],
-			splicedImages: []
+			splicedImages: [],
+			selectedImage: null
 		}
 	},
 	beforeMount () {
@@ -88,7 +58,8 @@ export default {
 
 	},
 	methods: {
-		toggleModal () {
+		toggleModal (key) {
+			this.selectedImage = key;
 			this.clicked = !this.clicked;
 		}
 	}
