@@ -9,7 +9,7 @@
 					Gallery
 				</div>
 			</a>
-			<!-- <i class="fab fa-instagram"></i> -->
+			<i href="https://www.instagram.com/deadypooli/" target="_blank" class="fab fa-instagram"></i>
 		</div>
 	</header>
 </template>
