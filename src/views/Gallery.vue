@@ -61,6 +61,7 @@ export default {
 		toggleModal (key) {
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
+			document.body.classList.add('body-noscroll');
 		}
 	}
 }

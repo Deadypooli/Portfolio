@@ -16,6 +16,7 @@ export default {
     methods: {
         toggleModal () {
             this.$emit('clicked', false);
+            document.body.classList.remove('body-noscroll');
         }
     }
 }
