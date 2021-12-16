@@ -2,6 +2,8 @@
 	<Header/>
 	<Display
 	:selectedImage="selectedImage"
+	:images="images"
+	:splitImages="splitImages"
 	v-if="clicked"
 	@clicked="toggleModal"/>
     <section class="gallery-container">
@@ -47,18 +49,24 @@ export default {
 				require('@/assets/heart.jpg'),
 			],
 			splicedImages: [],
-			selectedImage: null
+			splitImages: [],
+			selectedImage: null,
 		}
 	},
 	beforeMount () {
-		var splicer = Math.ceil(this.images.length / 3);
-		this.splicedImages[0] = this.images.splice(-splicer);
-		this.splicedImages[1] = this.images.splice(-splicer);
-		this.splicedImages[2] = this.images;
+		var imageArray = [...this.images];
+		var splicer = Math.ceil(imageArray.length / 3);
+		this.splicedImages[0] = imageArray.splice(-splicer);
+		this.splicedImages[1] = imageArray.splice(-splicer);
+		this.splicedImages[2] = imageArray;
 
 	},
 	methods: {
 		toggleModal (key) {
+			var index = this.images.findIndex(index => index === key)
+			this.splitImages[0] = this.images.slice(0,index);
+			this.splitImages[1] = this.images.slice(index + 1);
+			console.log(this.splitImages);
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
 			document.body.classList.add('body-noscroll');
