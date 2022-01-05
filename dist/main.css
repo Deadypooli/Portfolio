@@ -13,6 +13,30 @@ body {
   margin: 0;
   background: #181818;
   background-image: linear-gradient(90deg, #90dbff 0%, #fecab3 100%);
+  overflow: overlay;
+}
+
+.body-noscroll {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fecab3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 29, 29, 0.4);
+  border-radius: 100px;
+  border: 3.5px solid #fecab3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 29, 29, 0.6);
 }
 
 .display-backdrop {
@@ -21,11 +45,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 64px;
+  padding-block: 64px;
   background-color: rgba(25, 25, 46, 0.8);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 10;
 }
 
@@ -33,10 +58,16 @@ body {
   display: block;
   margin: auto;
   max-height: 100%;
-  max-width: 100%;
+  max-width: 75%;
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
+}
+
+.edge-img {
+  height: 100%;
+  width: 50px;
+  background-size: cover;
 }
 
 .gallery-container {
@@ -46,7 +77,7 @@ body {
 }
 
 .gallery-grid {
-  margin: 96px 48px;
+  margin: 120px 48px;
   max-width: 1366px;
   display: grid;
   align-items: start;
@@ -79,16 +110,18 @@ body {
   color: #eee;
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
-  z-index: 1;
+  padding: 20px;
+  z-index: 10;
 }
 
 .header-items {
   padding: 20px;
-  width: 100vw;
-  max-width: 1366px;
+  width: 100%;
+  max-width: 1406px;
+  border-radius: 10px;
+  background: rgba(29, 29, 29, 0.4);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 

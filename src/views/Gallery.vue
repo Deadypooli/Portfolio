@@ -34,7 +34,7 @@ export default {
 		return {
 			clicked: false,
 			images: [
-				require('@/assets/jump.jpg'),
+				require('@/assets/jump.png'),
 				require('@/assets/cat.jpg'),
 				require('@/assets/punch.png'),
 				require('@/assets/lola.png'),
