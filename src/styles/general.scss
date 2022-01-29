@@ -10,7 +10,7 @@ body {
 	font-size: 20px;
 	margin: 0;
 	background: #181818;
-	background-image: linear-gradient(90deg, rgba(144,219,255,1) 0%, rgba(254,202,179,1) 100%);
+	// background-image: linear-gradient(90deg, rgba(144,219,255,1) 0%, rgba(254,202,179,1) 100%);
 	overflow: overlay;
 }
 
@@ -24,19 +24,15 @@ body {
   }
  
   ::-webkit-scrollbar-track {
-    background-color: rgba(254,202,179,1);
+    background-color: #181818;
   }
   
   ::-webkit-scrollbar-thumb {
-	background: rgba(29, 29, 29, 0.4);
+	background: rgba(59, 59, 59, 0.4);
 	border-radius: 100px;
-	border: 3.5px solid rgba(254,202,179,1);
+	border: 3.5px solid #181818;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-	background: rgba(29, 29, 29, 0.6);
-  }
-
-  img {
-	  pointer-events: none;
+	background: rgba(59, 59, 59, 0.6);
   }

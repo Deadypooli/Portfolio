@@ -11,13 +11,29 @@
 	align-items: start;
 	columns: 3;
 	grid-column-gap: 24px;
-	grid-template-columns: repeat(3, minmax(0,1fr));
+	grid-template-columns: repeat(auto-fill, minmax(330px ,1fr));
+}
+
+.gallery-flex {
+	width: 100%;
+	max-width: 1366px;
+	margin: 120px 48px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .gallery-column {
 	display: grid;
     grid-template-columns: minmax(0,1fr);
     row-gap: 24px;
+}
+
+.flex-img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 20px 0;
+	border-radius: 4px;
 }
 
 .gallery-img {

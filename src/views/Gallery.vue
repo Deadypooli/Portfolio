@@ -7,7 +7,7 @@
 	v-if="clicked"
 	@clicked="toggleModal"/>
     <section class="gallery-container">
-		<div class="gallery-grid">
+		<!-- <div class="gallery-grid">
 			<div class="gallery-column"
 			v-for="imagelist in splicedImages"
 			:key="imagelist">
@@ -18,6 +18,14 @@
 				v-bind:src="key" 
 				v-on:click="toggleModal(key)">
 			</div>
+		</div> -->
+		<div class="gallery-flex">
+			<img
+			class="flex-img"
+			v-for="key in images"
+			:key="key"
+			v-bind:src="key"
+			v-on:click="toggleModal(key)">
 		</div>
 	</section>
 </template>
@@ -66,7 +74,6 @@ export default {
 			var index = this.images.findIndex(index => index === key)
 			this.splitImages[0] = this.images.slice(0,index);
 			this.splitImages[1] = this.images.slice(index + 1);
-			console.log(this.splitImages);
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
 			document.body.classList.add('body-noscroll');
