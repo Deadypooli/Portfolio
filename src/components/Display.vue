@@ -2,7 +2,7 @@
     <div class="display-backdrop"
     ref="displayBackdrop"
     v-on:click.self="toggleModal">
-        <div v-bind:style="{backgroundImage: 'url(' + prevImage + ')'}"
+        <!-- <div v-bind:style="{backgroundImage: 'url(' + prevImage + ')'}"
         @click="slideImage(0)"
         class="edge-img">
         </div>
@@ -12,7 +12,12 @@
         <div v-bind:style="{backgroundImage: 'url(' + nextImage + ')'}"
         @click="slideImage(2)"
         class="edge-img">
-        </div>
+        </div> -->
+        <!-- <div class="scrolling-container"> -->
+            <img class="display-img"
+                v-bind:src="displayImage"
+            >
+        <!-- </div> -->
     </div>
 </template>
 
@@ -51,10 +56,6 @@ export default {
             this.nextImage = this.imageArray[currentImageIndex + 1];
             this.prevImage = this.imageArray[currentImageIndex - 1];
         }
-        // scrollX (e) {
-        //     e.preventDefault();
-        //     this.$refs.displayBackdrop.scrollLeft += e.deltaY;
-        // }
     }
 }
 </script>
