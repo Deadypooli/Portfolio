@@ -1,7 +1,7 @@
 <template>
   <Header/>
   <div class="hero-container">
-    <img src="../assets/fall.png" class="hero-img">
+    <img src="../assets/fall.jpg" class="hero-img">
   </div>
 </template>
 
