@@ -44,37 +44,20 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding-block: 24px;
+  padding: 24px;
   background-color: rgba(25, 25, 46, 0.8);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 10;
-  overflow-x: scroll;
 }
 
 .display-img {
   display: block;
-  margin: auto;
-  max-height: 100%;
-  max-width: 85%;
   background-size: cover;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
-}
-
-.edge-img {
-  height: 100%;
-  width: 50px;
-  background-size: cover;
-}
-
-.scrolling-container {
-  width: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 .display-image {
@@ -157,7 +140,7 @@ body {
   width: 100%;
   max-width: 1406px;
   border-radius: 10px;
-  background: rgba(59, 59, 59, 0.4);
+  background: rgba(59, 59, 59, 0.6);
   display: flex;
   justify-content: space-around;
   align-items: center;
