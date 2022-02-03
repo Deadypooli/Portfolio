@@ -11,19 +11,23 @@
 			v-for="imagelist in splicedImages"
 			:key="imagelist">
 				<img 
-				class="gallery-img"
+				class="gallery-img hide-img"
+				ref="galleryImg"
 				v-for="key in imagelist" 
 				:key="key" 
-				v-bind:src="key" 
+				v-bind:src="key"
+				@load="displayImg()"
 				v-on:click="toggleModal(key)">
 			</div>
 		</div>
 		<div class="gallery-flex">
 			<img
-			class="flex-img"
+			class="flex-img hide-img"
+			ref="flexImg"
 			v-for="key in images"
 			:key="key"
 			v-bind:src="key"
+			@load="displayImg()"
 			v-on:click="toggleModal(key)">
 		</div>
 	</section>
@@ -48,22 +52,33 @@ export default {
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
 		var imageArray = [...this.images];
-		var splicer = Math.ceil(imageArray.length / 3);
-		this.splicedImages[0] = imageArray.splice(-splicer);
-		this.splicedImages[1] = imageArray.splice(-splicer);
-		this.splicedImages[2] = imageArray;
+		this.spliceImages (imageArray);
 
 	},
 	methods: {
+		spliceImages (imageArray) {
+			var splicer = Math.ceil(imageArray.length / 3);
+			this.splicedImages[0] = imageArray.splice(-splicer);
+			this.splicedImages[1] = imageArray.splice(-splicer);
+			this.splicedImages[2] = imageArray;
+		},
 		toggleModal (key) {
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
 			document.body.classList.add('body-noscroll');
 		},
-		importAll(r) {
+		importAll (r) {
 			let images = [];
 			r.keys().map((item, index) => { images[index] = r(item); });
 			return images;
+		},
+		displayImg () {
+			for (let item of this.$refs.galleryImg) {
+				item.classList.remove('hide-img');
+			}
+			for (let flexItem of this.$refs.flexImg) {
+				flexItem.classList.remove('hide-img');
+			}
 		}
 	}
 }

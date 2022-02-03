@@ -10,7 +10,7 @@
 				</div>
 			</a>
 			<a href="https://www.instagram.com/deadypooli/" target="_blank">
-				<i class="fab fa-instagram fa-lg"></i>
+				<img src="../logo/instagram.svg" class="header-item insta-icon">
 			</a>
 		</div>
 	</header>
