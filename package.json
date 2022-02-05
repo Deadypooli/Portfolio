@@ -15,6 +15,7 @@
     "atob": "^2.1.2",
     "body-parser": "*",
     "core-js": "^3.6.5",
+    "dropbox": "^10.24.0",
     "express": "*",
     "mime": "^3.0.0",
     "uuidv4": "^6.2.12",

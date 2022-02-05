@@ -53,7 +53,6 @@ export default {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
 		var imageArray = [...this.images];
 		this.spliceImages (imageArray);
-
 	},
 	methods: {
 		spliceImages (imageArray) {
