@@ -22,8 +22,8 @@
 	box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
 }
 
-.display-image {
-	display: block;
-	width: 300px;
-	height: auto;
+@media (max-width: 761px) {
+	.display-img {
+		max-width: 100%;
+	}
 }

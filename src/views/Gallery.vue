@@ -6,29 +6,23 @@
 	v-if="clicked"
 	@clicked="toggleModal"/>
     <section class="gallery-container">
-		<div class="gallery-grid">
-			<div class="gallery-column"
-			v-for="imagelist in splicedImages"
-			:key="imagelist">
-				<img 
-				class="gallery-img hide-img"
-				ref="galleryImg"
-				v-for="key in imagelist" 
-				:key="key" 
-				v-bind:src="key"
-				@load="displayImg()"
-				v-on:click="toggleModal(key)">
+		<div
+			v-if="!showImg"
+			class="gallery-grid">
+			<div
+				class="grid-placeholder"
+				v-for="i in 8"
+				:key="i">
 			</div>
 		</div>
-		<div class="gallery-flex">
-			<img
-			class="flex-img hide-img"
-			ref="flexImg"
+		<div v-if="showImg" class="gallery-grid">
+			<div
+			class="grid-img"
 			v-for="key in images"
+			:style="{ backgroundImage: 'url(' + key + ')'}"
 			:key="key"
-			v-bind:src="key"
-			@load="displayImg()"
 			v-on:click="toggleModal(key)">
+			</div>
 		</div>
 	</section>
 </template>
@@ -47,6 +41,7 @@ export default {
 			images: [],
 			splicedImages: [],
 			selectedImage: null,
+			showImg: false,
 		}
 	},
 	beforeMount () {
@@ -54,6 +49,15 @@ export default {
 		var imageArray = [...this.images];
 		this.spliceImages (imageArray);
 
+	},
+	mounted () {
+		let img = new Image();
+		for (let i in this.images) {
+			img.onload = () => {
+				this.showImg = true;
+			}
+			img.src = this.images[i];
+		}
 	},
 	methods: {
 		spliceImages (imageArray) {
@@ -72,14 +76,6 @@ export default {
 			r.keys().map((item, index) => { images[index] = r(item); });
 			return images;
 		},
-		displayImg () {
-			for (let item of this.$refs.galleryImg) {
-				item.classList.remove('hide-img');
-			}
-			for (let flexItem of this.$refs.flexImg) {
-				flexItem.classList.remove('hide-img');
-			}
-		}
 	}
 }
 
