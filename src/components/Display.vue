@@ -1,6 +1,6 @@
 <template>
     <div class="display-backdrop"
-    v-on:click.self="closeModal">
+    v-on:click.self="toggleModal">
             <img class="display-img"
                 v-bind:src="displayImage"
             >
@@ -16,7 +16,7 @@ export default {
         }
     },
     methods: {
-        closeModal () {
+        toggleModal () {
             this.$emit('clicked', false);
             document.body.classList.remove('noscroll');
         },

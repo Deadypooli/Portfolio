@@ -3,7 +3,7 @@
 	<Display
 	:selectedImage="selectedImage"
 	v-if="clicked"
-	@clicked="closeModal"/>
+	@clicked="toggleModal(key)"/>
     <section class="gallery-container">
 		<div
 			v-if="!showImg"
@@ -20,7 +20,7 @@
 			v-for="key in images"
 			:src="key"
 			:key="key"
-			v-on:click="openModal(key)">
+			v-on:click="toggleModal(key)">
 		</div>
 	</section>
 </template>
@@ -55,7 +55,7 @@ export default {
 		}
 	},
 	methods: {
-		openModal (key) {
+		toggleModal (key) {
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
 			document.body.classList.add('noscroll');
