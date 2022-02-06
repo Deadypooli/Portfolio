@@ -3,16 +3,15 @@
 	position: fixed;
 	width: 100%;
 	color: #eee;
-	display: flex;
-	justify-content: center;
 	padding: 20px;
 	z-index: 10;
 }
 
 .header-items {
+	margin-inline: auto;
 	padding: 20px;
 	width: 100%;
-	max-width: 1406px;
+	max-width: 1400px;
 	border-radius: 10px;
 	background: rgba(59, 59, 59, 0.6);
 	display: flex;
@@ -20,15 +19,7 @@
 	align-items: center;
 }
 
-.header-item {
-	padding: 5px;
-}
-
-.header-item:hover {
-	cursor: pointer;
-}
-
-.home-icon {
+.header-icon {
 	display: block;
 	padding: 0;
 	width: 36px;
@@ -36,8 +27,6 @@
 }
 
 .insta-icon {
-	display: block;
-	padding: 0;
 	width: 26px;
 	height: 26px;
 }
