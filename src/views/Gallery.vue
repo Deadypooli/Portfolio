@@ -2,9 +2,8 @@
 	<Header/>
 	<Display
 	:selectedImage="selectedImage"
-	:images="images"
 	v-if="clicked"
-	@clicked="toggleModal"/>
+	@clicked="closeModal"/>
     <section class="gallery-container">
 		<div
 			v-if="!showImg"
@@ -16,13 +15,12 @@
 			</div>
 		</div>
 		<div v-if="showImg" class="gallery-grid">
-			<div
+			<img
 			class="grid-img"
 			v-for="key in images"
-			:style="{ backgroundImage: 'url(' + key + ')'}"
+			:src="key"
 			:key="key"
-			v-on:click="toggleModal(key)">
-			</div>
+			v-on:click="openModal(key)">
 		</div>
 	</section>
 </template>
@@ -39,15 +37,12 @@ export default {
 		return {
 			clicked: false,
 			images: [],
-			splicedImages: [],
 			selectedImage: null,
 			showImg: false,
 		}
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
-		var imageArray = [...this.images];
-		this.spliceImages (imageArray);
 
 	},
 	mounted () {
@@ -60,16 +55,10 @@ export default {
 		}
 	},
 	methods: {
-		spliceImages (imageArray) {
-			var splicer = Math.ceil(imageArray.length / 3);
-			this.splicedImages[0] = imageArray.splice(-splicer);
-			this.splicedImages[1] = imageArray.splice(-splicer);
-			this.splicedImages[2] = imageArray;
-		},
-		toggleModal (key) {
+		openModal (key) {
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
-			document.body.classList.add('body-noscroll');
+			document.body.classList.add('noscroll');
 		},
 		importAll (r) {
 			let images = [];
