@@ -2,7 +2,7 @@
 	<header class="header">
 		<div class="header-items">
 			<a href="/">
-				<img src="../logo/logo.png" class="header-icon">
+				<img src="../logo/logo.svg" class="header-icon">
 			</a>
 			<a href="/gallery">
 				<div>

@@ -14,12 +14,15 @@
 				:key="i">
 			</div>
 		</div>
-		<div v-if="showImg" class="gallery-grid">
+		<div
+			ref="galleryGrid"
+			class="gallery-grid gallery-hide">
 			<img
 			class="grid-img"
 			v-for="key in images"
 			:src="key"
 			:key="key"
+			@load="imgLoaded"
 			v-on:click="toggleModal(key)">
 		</div>
 	</section>
@@ -39,20 +42,12 @@ export default {
 			images: [],
 			selectedImage: null,
 			showImg: false,
+			imgCount: 0,
 		}
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
 
-	},
-	mounted () {
-		let img = new Image();
-		for (let i in this.images) {
-			img.onload = () => {
-				this.showImg = true;
-			}
-			img.src = this.images[i];
-		}
 	},
 	methods: {
 		toggleModal (key) {
@@ -65,6 +60,13 @@ export default {
 			r.keys().map((item, index) => { images[index] = r(item); });
 			return images;
 		},
+		imgLoaded () {
+			this.imgCount += 1;
+			if (this.imgCount === this.images.length) {
+				this.showImg = true;
+				this.$refs.galleryGrid.classList.remove('gallery-hide');
+			}
+		}
 	}
 }
 
