@@ -26,11 +26,13 @@
 			v-on:click="toggleModal(key)">
 		</div>
 	</section>
+	<div ref="dropboxContainer"></div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import Display from '@/components/Display.vue'
+import { Dropbox } from 'dropbox'
 
 export default {
 	components: { Header, Display },
@@ -47,6 +49,42 @@ export default {
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
+	},
+	mounted () {
+		try {
+			var token = require('/data.json').token;
+		} catch (error) {
+			console.log(error.message);
+		}
+
+		var dbx = new Dropbox({ accessToken: token });
+		dbx.usersGetCurrentAccount()
+		.then(function(response) {
+			console.log(response);
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+
+		dbx.filesGetThumbnail({"path": "/jump.png"})
+		.then(function(response) {
+			console.log(response);
+		})
+		.catch(function(error) {
+			console.log("got error:");
+			console.log(error);
+		});
+
+		dbx.filesListFolder({path: '/deadypooli_portfolio'})
+		.then(function(response) {
+			console.log(response.entries);
+		})
+		.catch(function(error) {
+			console.log('another error:');
+			console.error(error);
+		});
+
+		console.log(dbx);
 	},
 	methods: {
 		toggleModal (key) {
