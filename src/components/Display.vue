@@ -1,6 +1,5 @@
 <template>
     <div class="display-backdrop"
-    ref="displayBackdrop"
     v-on:click.self="toggleModal">
             <img class="display-img"
                 v-bind:src="displayImage"
@@ -10,17 +9,16 @@
 
 <script>
 export default {
-    props: ['selectedImage', 'images'],
+    props: ['selectedImage'],
     data () {
         return {
             displayImage: this.selectedImage,
-            imageArray: this.images,
         }
     },
     methods: {
         toggleModal () {
             this.$emit('clicked', false);
-            document.body.classList.remove('body-noscroll');
+            document.body.classList.remove('noscroll');
         },
     }
 }

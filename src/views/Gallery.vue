@@ -2,32 +2,27 @@
 	<Header/>
 	<Display
 	:selectedImage="selectedImage"
-	:images="images"
 	v-if="clicked"
-	@clicked="toggleModal"/>
+	@clicked="toggleModal(key)"/>
     <section class="gallery-container">
-		<div class="gallery-grid">
-			<div class="gallery-column"
-			v-for="imagelist in splicedImages"
-			:key="imagelist">
-				<img 
-				class="gallery-img hide-img"
-				ref="galleryImg"
-				v-for="key in imagelist" 
-				:key="key" 
-				v-bind:src="key"
-				@load="displayImg()"
-				v-on:click="toggleModal(key)">
+		<div
+			v-if="!showImg"
+			class="gallery-grid">
+			<div
+				class="grid-placeholder"
+				v-for="i in 8"
+				:key="i">
 			</div>
 		</div>
-		<div class="gallery-flex">
+		<div
+			ref="galleryGrid"
+			class="gallery-grid gallery-hide">
 			<img
-			class="flex-img hide-img"
-			ref="flexImg"
+			class="grid-img"
 			v-for="key in images"
+			:src="key"
 			:key="key"
-			v-bind:src="key"
-			@load="displayImg()"
+			@load="imgLoaded"
 			v-on:click="toggleModal(key)">
 		</div>
 	</section>
@@ -45,38 +40,30 @@ export default {
 		return {
 			clicked: false,
 			images: [],
-			splicedImages: [],
 			selectedImage: null,
+			showImg: false,
+			imgCount: 0,
 		}
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
-		var imageArray = [...this.images];
-		this.spliceImages (imageArray);
 	},
 	methods: {
-		spliceImages (imageArray) {
-			var splicer = Math.ceil(imageArray.length / 3);
-			this.splicedImages[0] = imageArray.splice(-splicer);
-			this.splicedImages[1] = imageArray.splice(-splicer);
-			this.splicedImages[2] = imageArray;
-		},
 		toggleModal (key) {
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
-			document.body.classList.add('body-noscroll');
+			document.body.classList.add('noscroll');
 		},
 		importAll (r) {
 			let images = [];
 			r.keys().map((item, index) => { images[index] = r(item); });
 			return images;
 		},
-		displayImg () {
-			for (let item of this.$refs.galleryImg) {
-				item.classList.remove('hide-img');
-			}
-			for (let flexItem of this.$refs.flexImg) {
-				flexItem.classList.remove('hide-img');
+		imgLoaded () {
+			this.imgCount += 1;
+			if (this.imgCount === this.images.length) {
+				this.showImg = true;
+				this.$refs.galleryGrid.classList.remove('gallery-hide');
 			}
 		}
 	}
