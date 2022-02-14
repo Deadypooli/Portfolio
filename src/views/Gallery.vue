@@ -47,7 +47,6 @@ export default {
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
-
 	},
 	methods: {
 		toggleModal (key) {
