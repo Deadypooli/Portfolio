@@ -56,19 +56,19 @@ export default {
 		dbx.filesListFolder({path: ''})
 			.then(function(response) {
 				that.files = response.result.entries;
-				console.log('files:');
 				for (var file in that.files) {
 					dbx.sharingCreateSharedLinkWithSettings({path: that.files[file].path_lower})
 				}
+				dbx.sharingListSharedLinks()
+					.then(function(response) {
+						that.imgArray = response.result.links
+						for (var link in that.imgArray) {
+							that.imgArray[link].url = that.imgArray[link].url.slice(0, -1) + '1';
+						}
+					})
 			})
 
-		dbx.sharingListSharedLinks()
-			.then(function(response) {
-				that.imgArray = response.result.links
-				for (var link in that.imgArray) {
-					that.imgArray[link].url = that.imgArray[link].url.slice(0, -1) + '1';
-				}
-			})
+
 	},
 	methods: {
 		toggleModal (key) {
