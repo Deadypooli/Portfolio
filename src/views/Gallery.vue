@@ -32,6 +32,8 @@
 <script>
 import Header from '@/components/Header.vue'
 import Display from '@/components/Display.vue'
+import data from '/data.json'
+import { Dropbox } from 'dropbox'
 
 export default {
 	components: { Header, Display },
@@ -44,10 +46,39 @@ export default {
 			selectedImage: null,
 			showImg: false,
 			imgCount: 0,
+			imageName: null,
 		}
 	},
 	beforeMount () {
 		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
+		var dbx = new Dropbox({ accessToken: data.token });
+		dbx.usersGetCurrentAccount()
+			.then(function(response) {
+				console.log('user:');
+				console.log(response);
+			})
+			.catch(function(error) {
+				console.error(error);
+			});
+
+		dbx.filesListFolder({path: ''})
+			.then(function(response) {
+				console.log('files:');
+				console.log(response);
+				console.log(response.result.entries);
+			})
+			.catch(function(error) {
+				console.error(error);
+			});
+
+		dbx.sharingCreateSharedLinkWithSettings({path: '/jump.png'})
+			.then(function(response) {
+				console.log('link:');
+				console.log(response);
+			})
+			.catch(function(error) {
+				console.error(error);
+			});
 	},
 	methods: {
 		toggleModal (key) {
