@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "atob": "^2.1.2",
+    "aws-sdk": "^2.1077.0",
     "body-parser": "*",
     "core-js": "^3.6.5",
     "dotenv": "^16.0.0",

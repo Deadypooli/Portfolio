@@ -26,7 +26,6 @@ export default {
     };
   },
   beforeMount () {
-    console.log(process.env.DROPBOX_TOKEN);
     this.getImage();
   },
   methods: {
