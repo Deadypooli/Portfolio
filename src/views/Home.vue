@@ -11,7 +11,6 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import env from '/.env'
 import { Dropbox } from "dropbox";
 
 export default {

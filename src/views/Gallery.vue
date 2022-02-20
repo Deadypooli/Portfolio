@@ -32,7 +32,6 @@
 <script>
 import Header from '@/components/Header.vue'
 import Display from '@/components/Display.vue'
-import env from '/.env'
 import { Dropbox } from 'dropbox'
 
 export default {
