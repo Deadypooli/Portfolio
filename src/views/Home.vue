@@ -1,17 +1,43 @@
 <template>
-  <Header/>
+  <Header />
   <div class="hero-container">
-    <img src="../assets/fall.jpg" class="hero-img">
+    <img
+    :src="img"
+    @load="imgLoaded()"
+    ref="heroImg"
+    class="hero-img hide" />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import Header from "@/components/Header.vue";
+import data from "/data.json";
+import { Dropbox } from "dropbox";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    Header
-  }
-}
+    Header,
+  },
+  data() {
+    return {
+      img: null,
+    };
+  },
+  beforeMount () {
+    this.getImage();
+  },
+  methods: {
+    getImage () {
+      var dbx = new Dropbox({ accessToken: data.token });
+      var that = this;
+      dbx.sharingListSharedLinks().then(function (response) {
+        that.img = response.result.links[0].url.slice(0, -1) + '1';
+      });
+    },
+    imgLoaded () {
+      this.$refs.heroImg.classList.remove('hide');
+    }
+  },
+};
 </script>

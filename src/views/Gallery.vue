@@ -16,13 +16,14 @@
 		</div>
 		<div
 			ref="galleryGrid"
-			class="gallery-grid">
+			class="gallery-grid gallery-hide">
 			<img
 			class="grid-img"
 			v-for="key in imgArray"
 			:src="key.url"
 			:key="key.url"
-			v-on:click="toggleModal(key)">
+			@load="imgLoaded()"
+			v-on:click="toggleModal(key.url)">
 		</div>
 	</section>
 	<div ref="dropboxContainer"></div>
@@ -41,34 +42,14 @@ export default {
 	data () {
 		return {
 			clicked: false,
-			images: [],
 			selectedImage: null,
-			showImg: true,
+			showImg: false,
 			imgCount: 0,
 			imgArray: null,
-			files: null,
 		}
 	},
 	beforeMount () {
-		this.images = this.importAll(require.context('@/assets', false , /\.(png|jpe?g)$/));
-		var dbx = new Dropbox({ accessToken: data.token });
-		var that = this;
-		dbx.filesListFolder({path: ''})
-			.then(function(response) {
-				that.files = response.result.entries;
-				for (var file in that.files) {
-					dbx.sharingCreateSharedLinkWithSettings({path: that.files[file].path_lower})
-				}
-				dbx.sharingListSharedLinks()
-					.then(function(response) {
-						that.imgArray = response.result.links
-						for (var link in that.imgArray) {
-							that.imgArray[link].url = that.imgArray[link].url.slice(0, -1) + '1';
-						}
-					})
-			})
-
-
+		this.getImages();
 	},
 	methods: {
 		toggleModal (key) {
@@ -76,18 +57,35 @@ export default {
 			this.clicked = !this.clicked;
 			document.body.classList.add('noscroll');
 		},
-		importAll (r) {
-			let images = [];
-			r.keys().map((item, index) => { images[index] = r(item); });
-			return images;
-		},
 		imgLoaded () {
 			this.imgCount += 1;
-			if (this.imgCount === this.images.length) {
+			if (this.imgCount === this.imgArray.length) {
 				this.showImg = true;
 				this.$refs.galleryGrid.classList.remove('gallery-hide');
 			}
-		}
+		},
+		getImages() {
+			var dbx = new Dropbox({ accessToken: data.token });
+			var that = this;
+			dbx.filesListFolder({path: ''})
+			.then(function(response) {
+				var files = response.result.entries;
+				dbx.sharingListSharedLinks()
+					.then(function(response) {
+						var links = response.result.links
+						if (links.length !== files.length) {
+							for (var file in files) {
+								dbx.sharingCreateSharedLinkWithSettings({path: files[file].path_lower})
+							}
+						}
+
+						that.imgArray = links;
+						for (var link in that.imgArray) {
+							that.imgArray[link].url = that.imgArray[link].url.slice(0, -1) + '1';
+						}
+					})
+			})
+		},
 	}
 }
 
