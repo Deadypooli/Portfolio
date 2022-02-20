@@ -32,6 +32,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Display from '@/components/Display.vue'
+import env from '/.env'
 import { Dropbox } from 'dropbox'
 
 export default {
@@ -48,11 +49,6 @@ export default {
 		}
 	},
 	beforeMount () {
-		const aws = require('aws-sdk');
-		let s3 = new aws.S3({
-			accessToken: process.env.DROPBOX_TOKEN,
-		});
-		console.log(s3);
 		this.getImages();
 	},
 	methods: {
@@ -69,7 +65,7 @@ export default {
 			}
 		},
 		getImages() {
-			var dbx = new Dropbox({ accessToken: process.env.DROPBOX_TOKEN });
+			var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
 			var that = this;
 			dbx.filesListFolder({path: ''})
 			.then(function(response) {
