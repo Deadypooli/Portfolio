@@ -20,7 +20,6 @@ export default {
   },
   data() {
     return {
-      token: null,
       img: null,
     };
   },
@@ -29,8 +28,7 @@ export default {
   },
   methods: {
     getImage () {
-      console.log(env);
-      var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
+      var dbx = new Dropbox({ accessToken: process.env.DROPBOX_TOKEN });
       var that = this;
       dbx.sharingListSharedLinks().then(function (response) {
         that.img = response.result.links[0].url.slice(0, -1) + '1';

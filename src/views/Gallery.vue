@@ -64,7 +64,7 @@ export default {
 			}
 		},
 		getImages() {
-			var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
+			var dbx = new Dropbox({ accessToken: process.env.DROPBOX_TOKEN });
 			var that = this;
 			dbx.filesListFolder({path: ''})
 			.then(function(response) {
