@@ -32,7 +32,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Display from '@/components/Display.vue'
-import data from '/data.json'
+import env from '/.env'
 import { Dropbox } from 'dropbox'
 
 export default {
@@ -65,7 +65,7 @@ export default {
 			}
 		},
 		getImages() {
-			var dbx = new Dropbox({ accessToken: data.token });
+			var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
 			var that = this;
 			dbx.filesListFolder({path: ''})
 			.then(function(response) {
