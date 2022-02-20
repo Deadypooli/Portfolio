@@ -30,9 +30,10 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import Display from '@/components/Display.vue'
-import { Dropbox } from 'dropbox'
+import Header from '@/components/Header.vue';
+import Display from '@/components/Display.vue';
+import { Dropbox } from 'dropbox';
+import env from '/.env';
 
 export default {
 	components: { Header, Display },
@@ -64,7 +65,7 @@ export default {
 			}
 		},
 		getImages() {
-			var dbx = new Dropbox({ accessToken: process.env.DROPBOX_TOKEN });
+			var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
 			var that = this;
 			dbx.filesListFolder({path: ''})
 			.then(function(response) {
