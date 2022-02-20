@@ -12,7 +12,6 @@
 <script>
 import Header from '@/components/Header.vue';
 import { Dropbox } from 'dropbox';
-import env from '/.env';
 
 export default {
   name: 'Home',
@@ -29,7 +28,7 @@ export default {
   },
   methods: {
     getImage () {
-      var dbx = new Dropbox({ accessToken: env.DROPBOX_TOKEN });
+      var dbx = new Dropbox({ accessToken: process.env.DROPBOX_TOKEN });
       var that = this;
       dbx.sharingListSharedLinks().then(function (response) {
         that.img = response.result.links[0].url.slice(0, -1) + '1';
