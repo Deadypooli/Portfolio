@@ -80,7 +80,7 @@ export default {
 
 						that.imgArray = links;
 						for (var link in that.imgArray) {
-							that.imgArray[link].url = that.imgArray[link].url.slice(0, -1) + '1';
+							that.imgArray[link].url = that.imgArray[link].url.slice(0, -4) + 'raw=1';
 						}
 					})
 			})
