@@ -9,7 +9,7 @@ body {
 	font-family: 'BebasNeue', Helvetica, Arial;
 	font-size: 20px;
 	margin: 0;
-	background: #181818;
+	background-color: aliceblue;
 	overflow: overlay;
 }
 
@@ -27,15 +27,16 @@ body {
   }
  
   ::-webkit-scrollbar-track {
-    background-color: #181818;
+	background: aliceblue;
+
   }
   
   ::-webkit-scrollbar-thumb {
-	background: rgba(59, 59, 59, 0.4);
+	background-color: #dce5ee;
 	border-radius: 100px;
-	border: 3.5px solid #181818;
+	border: 3.5px solid #f0f8ff;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-	background: rgba(59, 59, 59, 0.6);
+	background: #dce5ee;
   }

@@ -1,7 +1,7 @@
 <template>
   <Header />
   <div class="hero-container">
-    <img
+      <img
     :src="img"
     @load="imgLoaded()"
     ref="heroImg"
@@ -11,7 +11,6 @@
 
 <script>
 import Header from '@/components/Header.vue';
-import { Dropbox } from 'dropbox';
 
 export default {
   name: 'Home',
@@ -20,20 +19,10 @@ export default {
   },
   data() {
     return {
-      img: null,
+      img: require ('@/img/fall.jpg'),
     };
   },
-  beforeMount () {
-    this.getImage();
-  },
   methods: {
-    getImage () {
-      var dbx = new Dropbox({ accessToken: process.env.VUE_APP_DROPBOX_TOKEN });
-      var that = this;
-      dbx.sharingListSharedLinks().then(function (response) {
-        that.img = response.result.links[0].url.slice(0, -4) + 'raw=1';
-      });
-    },
     imgLoaded () {
       this.$refs.heroImg.classList.remove('hide');
     }

@@ -7,9 +7,8 @@
 .gallery-grid {
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(3,minmax(0,1fr));
+	grid-template-columns: repeat(2,minmax(0,1fr));
 	grid-gap: 20px;
-	max-width: 1366px;
 	margin: 120px 32px 64px;
 }
 
@@ -19,9 +18,9 @@
 
 .grid-placeholder {
 	display: block;
-	height: 269px;
+	height: 500px;
 	border-radius: 10px;
-	background-color: rgba(59, 59, 59, 1);
+	background-color: rgb(85, 85, 85);
 	animation: shine 2s ease-in-out infinite;
 }
 
@@ -31,7 +30,7 @@
 	height: 269px;
 	border-radius: 10px;
 	object-position: center;
-	object-fit: cover;
+	object-fit: contain;
 	transition: all .1s ease-in-out;
 }
 
@@ -65,7 +64,7 @@
 	  opacity: 1;
 	}
 	50% {
-	  opacity: .3;
+	  opacity: .7;
 	}
 	100% {
 		opacity: 1;

@@ -10,7 +10,7 @@
 			class="gallery-grid">
 			<div
 				class="grid-placeholder"
-				v-for="i in 8"
+				v-for="i in 4"
 				:key="i">
 			</div>
 		</div>
@@ -20,10 +20,10 @@
 			<img
 			class="grid-img"
 			v-for="key in imgArray"
-			:src="key.url"
+			:src="key"
 			:key="key.url"
 			@load="imgLoaded()"
-			v-on:click="toggleModal(key.url)">
+			v-on:click="toggleModal(key)">
 		</div>
 	</section>
 	<div ref="dropboxContainer"></div>
@@ -32,7 +32,6 @@
 <script>
 import Header from '@/components/Header.vue';
 import Display from '@/components/Display.vue';
-import { Dropbox } from 'dropbox';
 
 export default {
 	components: { Header, Display },
@@ -44,14 +43,19 @@ export default {
 			selectedImage: null,
 			showImg: false,
 			imgCount: 0,
-			imgArray: null,
+			imgArray: [
+				require ('@/img/fir.png'),
+				require ('@/img/lorikeet.png'),
+				require ('@/img/penguin.png'),
+				require ('@/img/red-spider.png'),
+				require ('@/img/Rose.png'),
+			]
 		}
-	},
-	beforeMount () {
-		this.getImages();
 	},
 	methods: {
 		toggleModal (key) {
+			console.log('this ' + key);
+			
 			this.selectedImage = key;
 			this.clicked = !this.clicked;
 			document.body.classList.add('noscroll');
@@ -62,28 +66,6 @@ export default {
 				this.showImg = true;
 				this.$refs.galleryGrid.classList.remove('gallery-hide');
 			}
-		},
-		getImages() {
-			var dbx = new Dropbox({ accessToken: process.env.VUE_APP_DROPBOX_TOKEN });
-			var that = this;
-			dbx.filesListFolder({path: ''})
-			.then(function(response) {
-				var files = response.result.entries;
-				dbx.sharingListSharedLinks()
-					.then(function(response) {
-						var links = response.result.links
-						if (links.length !== files.length) {
-							for (var file in files) {
-								dbx.sharingCreateSharedLinkWithSettings({path: files[file].path_lower})
-							}
-						}
-
-						that.imgArray = links;
-						for (var link in that.imgArray) {
-							that.imgArray[link].url = that.imgArray[link].url.slice(0, -4) + 'raw=1';
-						}
-					})
-			})
 		},
 	}
 }
