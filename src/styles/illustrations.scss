@@ -1,0 +1,17 @@
+.illustrations-container {
+    overflow: hidden;
+}
+
+.illustrations-items {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: .5s;
+}
+
+.item {
+    flex: 1 0 800px;
+    outline: 1px solid red;
+    height: 640px;
+    margin: 20px;
+}

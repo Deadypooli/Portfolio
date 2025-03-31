@@ -11,6 +11,11 @@ const routes = [
     path: '/gallery',
     name: 'Gallery',
     component: () => import('../views/Gallery.vue')
+  },
+  {
+    path: '/illustrations',
+    name: 'Illustrations',
+    component: () => import('../views/Illustrations.vue')
   }
 ]
 

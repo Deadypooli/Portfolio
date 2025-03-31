@@ -16,6 +16,11 @@
 					Gallery
 				</div>
 			</a>
+			<a href="/illustrations">
+				<div>
+					Illustrations
+				</div>
+			</a>
 			<a href="https://www.instagram.com/ne0fy/" target="_blank">
 				<div>
 					Insta
