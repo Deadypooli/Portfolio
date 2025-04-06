@@ -184,13 +184,11 @@ body {
 }
 
 .illustrations-container {
-  overflow: hidden;
+  align-items: center;
 }
 
 .illustrations-items {
-  position: relative;
   display: flex;
-  flex-wrap: nowrap;
   transition: ease-in-out 0.5s;
 }
 
@@ -201,9 +199,13 @@ body {
   margin: 20px;
 }
 
+.nav {
+  position: relative;
+  margin: 0 auto;
+}
+
 .illustration-btn {
   z-index: 10;
-  position: fixed;
   left: 50px;
 }
 

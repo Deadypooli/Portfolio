@@ -1,11 +1,10 @@
 .illustrations-container {
-    overflow: hidden;
+    // overflow: hidden;
+    align-items: center;
 }
 
 .illustrations-items {
-    position: relative;
     display: flex;
-    flex-wrap: nowrap;
     transition: ease-in-out .5s;
 }
 
@@ -16,8 +15,12 @@
     margin: 20px;
 }
 
+.nav {
+    position: relative;
+    margin: 0 auto;
+}
+
 .illustration-btn {
     z-index: 10;
-    position: fixed;
     left: 50px;
 }
