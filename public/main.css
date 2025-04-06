@@ -193,7 +193,7 @@ body {
 }
 
 .item {
-  flex: 1 0 800px;
+  flex: 1 0;
   outline: 1px solid red;
   height: 640px;
   margin: 20px;

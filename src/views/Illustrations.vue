@@ -44,28 +44,27 @@ export default {
             count: 0,
             imgWidth: 0,
 			imgArray: [
-				require ('@/img/fir.png'),
-				require ('@/img/lorikeet.png'),
-				require ('@/img/penguin.png'),
-				require ('@/img/red-spider.png'),
+				require ('@/img/fir_concept.png'),
+				require ('@/img/lorikeet_concept.png'),
+				require ('@/img/penguin_concept.png'),
+                require ('@/img/rage.png'),
+				require ('@/img/red-spider_concept.png'),
 				require ('@/img/Rose.png'),
 			]
 		}
 	},
     mounted() {
         for (var key in this.imgArray) {
-            
             this.imgWidth = this.$refs['image'][key].width;
+            
         }
         
     },
     methods: {
 		slide (direction) {
             this.slidePosition = this.slidePosition + direction;
-            this.count = this.count + (direction * (this.imgWidth + 380));
+            this.count = this.count + (direction * (this.$refs['image'][-this.slidePosition].width + 40));
             this.$refs.illustrationsItems.style.transform = 'translateX(' + this.count + 'px)';
-            console.log(-this.slidePosition);
-            console.log(this.imgArray.length);
             
         }
 	}
