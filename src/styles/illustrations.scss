@@ -1,5 +1,4 @@
 .illustrations-container {
-    // overflow: hidden;
     align-items: center;
 }
 
@@ -10,17 +9,28 @@
 
 .item {
     flex: 1 0;
-    outline: 1px solid red;
+    border-radius: 5px;
     height: 640px;
     margin: 20px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
 }
 
 .nav {
-    position: relative;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .illustration-btn {
     z-index: 10;
-    left: 50px;
+    width: 50px;
+    height: 50px;
+    background-color:aqua;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+}
+
+.hidden {
+    visibility: hidden;
 }

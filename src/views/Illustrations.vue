@@ -16,15 +16,15 @@
         <div class="nav">
             <button
             class="illustration-btn"
-            v-if="(slidePosition < 0)"
+            :class="{hidden: !(slidePosition < 0)}"
             v-on:click="slide(+1)">
-            left
+            &larr;
             </button>
             <button
             class="illustration-btn"
-            v-if="(-slidePosition < (imgArray.length - 1))"
+            :class="{hidden: !(-slidePosition < (imgArray.length - 1))}"
             v-on:click="slide(-1)">
-                right
+            &rarr;
             </button>
         </div>
     </div>
@@ -62,10 +62,16 @@ export default {
     },
     methods: {
 		slide (direction) {
-            this.slidePosition = this.slidePosition + direction;
-            this.count = this.count + (direction * (this.$refs['image'][-this.slidePosition].width + 40));
+            if (direction == -1) {
+                this.count = this.count + (direction * (this.$refs['image'][-this.slidePosition].width + 40));
+                
+            } else {
+                this.count = this.count + (direction * (this.$refs['image'][-(this.slidePosition + 1)].width + 40));
+                
+            }
             this.$refs.illustrationsItems.style.transform = 'translateX(' + this.count + 'px)';
             
+            this.slidePosition = this.slidePosition + direction;
         }
 	}
 }
