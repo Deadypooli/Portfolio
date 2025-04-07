@@ -21,6 +21,11 @@
 					Illustrations
 				</div>
 			</a>
+			<a href="/models">
+				<div>
+					Models
+				</div>
+			</a>
 			<a href="https://www.instagram.com/ne0fy/" target="_blank">
 				<div>
 					Insta
