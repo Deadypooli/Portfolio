@@ -21,6 +21,16 @@ const routes = [
     path: '/models',
     name: 'Models',
     component: () => import('../views/Models.vue')
+  },
+  {
+    path: '/conceptArt',
+    name: 'ConceptArt',
+    component: () => import('../views/ConceptArt.vue')
+  },
+  {
+    path: '/neofyInfo',
+    name: 'NeofyInfo',
+    component: () => import('../views/NeofyInfo.vue')
   }
 ]
 

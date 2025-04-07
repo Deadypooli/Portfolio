@@ -11,9 +11,9 @@
 					Home
 				</div>
 			</a>
-			<a href="/gallery">
+			<a href="/conceptArt">
 				<div>
-					Gallery
+					Concept Art
 				</div>
 			</a>
 			<a href="/illustrations">
@@ -24,6 +24,11 @@
 			<a href="/models">
 				<div>
 					Models
+				</div>
+			</a>
+			<a href="/neofyInfo">
+				<div>
+					Neofy Info
 				</div>
 			</a>
 			<a href="https://www.instagram.com/ne0fy/" target="_blank">
