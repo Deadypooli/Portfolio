@@ -1,28 +1,31 @@
 <template>
     <Header />
-    <div
-    class="container"
-    ref="container">
+    <main>
+        
+        <div
+        class="container"
+        ref="container">
         <div class="image-container">
             <img 
-                class="image-before slider-image"
-                :src="wireImg">
+            class="image-before slider-image"
+            :src="wireImg">
             <img 
-                class="image-after slider-image"
-                :src="renderImg">
+            class="image-after slider-image"
+            :src="renderImg">
             <input
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                class="slider"
-                @input="(e) => slideImg(e)"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+            @input="(e) => slideImg(e)"
             />
             <div class="slider-button">
                 |||
             </div>
         </div>
     </div>
+</main>
 </template>
 
 <script>
