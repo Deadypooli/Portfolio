@@ -7,7 +7,6 @@
                 class="concept-img"
                 v-for="key in imgArray"
                 :src="key"
-                ref="image"
                 :key="key.url">
         </div>
     </main>
@@ -22,12 +21,11 @@
         data () {
 		return {
 			imgArray: [
-				require ('@/img/fir_concept.png'),
-				require ('@/img/lorikeet_concept.png'),
-				require ('@/img/penguin_concept.png'),
-                require ('@/img/rage.png'),
-				require ('@/img/red-spider_concept.png'),
-				require ('@/img/Rose.png'),
+				require ('@/img/concepts/fir_concept.png'),
+				require ('@/img/concepts/lorikeet_concept.png'),
+				require ('@/img/concepts/penguin_concept.png'),
+				require ('@/img/concepts/red-spider_concept.png'),
+				require ('@/img/concepts/Rose.png'),
                 ]
             }
         },

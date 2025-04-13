@@ -47,12 +47,8 @@ export default {
             count: 0,
             imgWidth: 0,
 			imgArray: [
-				require ('@/img/fir_concept.png'),
-				require ('@/img/lorikeet_concept.png'),
-				require ('@/img/penguin_concept.png'),
-                require ('@/img/rage.png'),
-				require ('@/img/red-spider_concept.png'),
-				require ('@/img/Rose.png'),
+                require ('@/img/illustrations/rage.png'),
+				require ('@/img/illustrations/fall.jpg'),
 			]
 		}
 	},

@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      img: require('@/img/fall.jpg'),
+      img: require('@/img/illustrations/fall.jpg'),
     };
   },
   methods: {

@@ -36,8 +36,8 @@
         name: 'Models',
         data() {
             return {
-                wireImg: require('@/img/lightsaber-grip-wireframe.png'),
-                renderImg: require('@/img/lightsaber-grip.png'),
+                wireImg: require('@/img/models/lightsaber-grip-wireframe.png'),
+                renderImg: require('@/img/models/lightsaber-grip.png'),
             };
         },
         methods: {

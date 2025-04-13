@@ -44,11 +44,11 @@ export default {
 			showImg: false,
 			imgCount: 0,
 			imgArray: [
-				require ('@/img/fir.png'),
-				require ('@/img/lorikeet.png'),
-				require ('@/img/penguin.png'),
-				require ('@/img/red-spider.png'),
-				require ('@/img/Rose.png'),
+				require ('@/img/concepts/fir.png'),
+				require ('@/img/concepts/lorikeet.png'),
+				require ('@/img/concepts/penguin.png'),
+				require ('@/img/concepts/red-spider.png'),
+				require ('@/img/concepts/Rose.png'),
 			]
 		}
 	},
