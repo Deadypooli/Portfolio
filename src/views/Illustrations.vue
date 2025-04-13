@@ -49,6 +49,9 @@ export default {
 			imgArray: [
                 require ('@/img/illustrations/rage.png'),
 				require ('@/img/illustrations/fall.jpg'),
+                require ('@/img/illustrations/hotter.png'),
+                require ('@/img/illustrations/jump.png'),
+                require ('@/img/illustrations/pink-frog.png'),
 			]
 		}
 	},

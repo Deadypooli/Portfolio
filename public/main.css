@@ -15,6 +15,10 @@ body {
   overflow: overlay;
 }
 
+main {
+  margin-inline: 20px;
+}
+
 .noscroll {
   overflow: hidden;
 }
@@ -219,7 +223,7 @@ body {
   margin: 0 auto;
 }
 
-.headline {
+.text-center {
   text-align: center;
 }
 
@@ -236,10 +240,6 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-main {
-  margin-inline: 20px;
 }
 
 .container {
@@ -283,10 +283,6 @@ main {
   left: var(--position);
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-main {
-  margin-inline: 20px;
 }
 
 .concept-container {
