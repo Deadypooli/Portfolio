@@ -219,6 +219,10 @@ body {
   margin: 0 auto;
 }
 
+.headline {
+  text-align: center;
+}
+
 .hero-container {
   position: fixed;
   top: 0;
