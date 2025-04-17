@@ -160,6 +160,14 @@ main {
   align-items: center;
 }
 
+.pages, .info {
+  display: flex;
+}
+
+a {
+  margin-inline: 10px;
+}
+
 .header-icon {
   display: block;
   padding: 0;
