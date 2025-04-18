@@ -293,6 +293,26 @@ a {
   pointer-events: none;
 }
 
+.project-container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.gif-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.gif-image {
+  width: 50%;
+  transform: scaleX(-1);
+}
+
+.gif-text {
+  width: 100%;
+  text-align: center;
+}
+
 .concept-container {
   display: block;
   position: relative;
