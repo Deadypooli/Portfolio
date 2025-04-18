@@ -253,7 +253,6 @@ a {
 .container {
   display: grid;
   position: relative;
-  max-width: 1400px;
   margin-inline: auto;
   --position: 50%;
 }
@@ -293,6 +292,12 @@ a {
   pointer-events: none;
 }
 
+.headline-projects {
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-bottom: 50px;
+}
+
 .project-container {
   max-width: 1400px;
   margin-inline: auto;
@@ -300,17 +305,29 @@ a {
 
 .gif-container {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .gif-image {
+  border-radius: 5px;
   width: 50%;
   transform: scaleX(-1);
 }
 
 .gif-text {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-description {
+  width: 50%;
+  margin-right: 50px;
 }
 
 .concept-container {
