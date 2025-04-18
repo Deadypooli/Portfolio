@@ -5,10 +5,10 @@
         <div class="image-container">
             <img 
             class="image-before slider-image"
-            :src="wireImg">
+            :src="imageArray[0]">
             <img 
             class="image-after slider-image"
-            :src="renderImg">
+            :src="imageArray[1]">
             <input
             type="range"
             min="0"
@@ -26,13 +26,7 @@
 
 <script>
     export default {
-        name: 'Models',
-        data() {
-            return {
-                wireImg: require('@/img/models/lightsaber-grip-wireframe.png'),
-                renderImg: require('@/img/models/lightsaber-grip.png'),
-            };
-        },
+        props: ['imageArray'],
         methods: {
             slideImg (e) {
                 this.$refs.container.style.setProperty('--position', `${e.target.value}%`);

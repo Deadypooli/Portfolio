@@ -15,17 +15,11 @@
             </div>
             <div class="image-container">
                 <div class="image-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Animi dolorem inventore explicabo quisquam dignissimos error exercitationem possimus corporis,
-                    ipsum veritatis quod itaque et aut distinctio laudantium nesciunt laborum. Placeat, animi.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Animi dolorem inventore explicabo quisquam dignissimos error exercitationem possimus corporis,
-                    ipsum veritatis quod itaque et aut distinctio laudantium nesciunt laborum. Placeat, animi.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Animi dolorem inventore explicabo quisquam dignissimos error exercitationem possimus corporis,
-                    ipsum veritatis quod itaque et aut distinctio laudantium nesciunt laborum. Placeat, animi.
+                    The cow intimidates all oponents with its ominent udder swing
                 </div>
-                <Model />
+                <Model
+                :imageArray="imageArray"
+                />
             </div>
         </div>
     </main>
@@ -40,7 +34,11 @@
         name: 'Projects',
         data() {
             return {
-                gifImg: require('@/img/projects/cow.gif')
+                gifImg: require('@/img/projects/cow.gif'),
+                imageArray: [
+                    require('@/img/projects/cow-wireframe.png'),
+                    require('@/img/projects/cow-render.png'),
+                ]
             };
         },
     };
