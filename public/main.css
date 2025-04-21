@@ -301,6 +301,7 @@ a {
 .project-container {
   max-width: 1400px;
   margin-inline: auto;
+  margin-bottom: 50px;
 }
 
 .gif-container {

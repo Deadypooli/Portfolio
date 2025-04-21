@@ -4,21 +4,24 @@
         <div class="headline-projects">
             <h1>Banana Drama</h1>
         </div>
-        <div class="project-container">
+        <div
+        v-for="element in animalsArray"
+        :key="element"
+        class="project-container">
             <div class="gif-container">
                 <img
                 class="gif-image" 
-                :src="gifImg">
+                :src="element.gif">
                 <div class="gif-text">
-                    <h1>The Cow</h1>
+                    <h1>The {{element.name}}</h1>
                 </div>
             </div>
             <div class="image-container">
                 <div class="image-description">
-                    The cow intimidates all oponents with its ominent udder swing
+                    {{element.description}}
                 </div>
                 <Model
-                :imageArray="imageArray"
+                :imageArray="element.imgArray"
                 />
             </div>
         </div>
@@ -34,10 +37,81 @@
         name: 'Projects',
         data() {
             return {
-                gifImg: require('@/img/projects/cow.gif'),
-                imageArray: [
-                    require('@/img/projects/cow-wireframe.png'),
-                    require('@/img/projects/cow-render.png'),
+                folderArray: [
+                    [
+                        require('@/img/projects/cow-wireframe.png'),
+                        require('@/img/projects/cow-render.png'),
+                        require('@/img/projects/cow.gif')
+                    ],
+                    [
+                        require('@/img/projects/tiger-wireframe.png'),
+                        require('@/img/projects/tiger-render.png'),
+                        require('@/img/projects/tiger.gif')
+                    ],
+                    [
+                        require('@/img/projects/giraffe-wireframe.png'),
+                        require('@/img/projects/giraffe-render.png'),
+                        require('@/img/projects/giraffe.gif')
+                    ],
+                    [
+                        require('@/img/projects/lion-wireframe.png'),
+                        require('@/img/projects/lion-render.png'),
+                        require('@/img/projects/lion.gif')
+                    ],
+                    [
+                        require('@/img/projects/cockatoo-wireframe.png'),
+                        require('@/img/projects/cockatoo-render.png'),
+                        require('@/img/projects/cockatoo.gif')
+                    ]
+                ],
+                animalsArray: [
+                    {
+                        name: 'Cow',
+                        description: 'The Cow intimidates all oponents with its ominent udder swing',
+                        gif: require('@/img/projects/cow.gif'),
+                        imgArray: [
+                            require('@/img/projects/cow-wireframe.png'),
+                            require('@/img/projects/cow-render.png')
+                        ],
+                        wireframe: require('@/img/projects/cow-wireframe.png'),
+                        render: require('@/img/projects/cow-render.png'),
+                    },
+                    {
+                        name: 'Tiger',
+                        description: 'All foes with bow down by the cuteness of this tiger kitten',
+                        gif: require('@/img/projects/tiger.gif'),
+                        imgArray: [
+                            require('@/img/projects/tiger-wireframe.png'),
+                            require('@/img/projects/tiger-render.png')
+                        ],
+                    },
+                    {
+                        name: 'Lion',
+                        description: 'He will scratch out the sense of evil in you',
+                        gif: require('@/img/projects/lion.gif'),
+                        imgArray: [
+                            require('@/img/projects/lion-wireframe.png'),
+                            require('@/img/projects/lion-render.png')
+                        ],
+                    },
+                    {
+                        name: 'Cockatoo',
+                        description: 'The cockatoo swirls all his enemies to the ground with his graceful jump',
+                        gif: require('@/img/projects/cockatoo.gif'),
+                        imgArray: [
+                            require('@/img/projects/cockatoo-wireframe.png'),
+                            require('@/img/projects/cockatoo-render.png')
+                        ],
+                    },
+                    {
+                        name: 'Giraffe',
+                        description: 'Watch out, the giraffes neck might be longer than you think and hell of a weapon when using it as helicopter blades',
+                        gif: require('@/img/projects/giraffe.gif'),
+                        imgArray: [
+                            require('@/img/projects/giraffe-wireframe.png'),
+                            require('@/img/projects/giraffe-render.png')
+                        ],
+                    }
                 ]
             };
         },
