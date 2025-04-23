@@ -1,9 +1,14 @@
 <template>
     <Header />
     <main>
-        <Model
-        :imageArray="imageArray"
-        />
+        <div
+        class="model-container"
+        v-for="model in modelsArray"
+        :key="model">
+            <Model
+            :imageArray="model.imgArray"
+            />
+        </div>
     </main>
 </template>
 
@@ -16,9 +21,28 @@
         name: 'Models',
         data () {
             return {
-                imageArray: [
-                    require('@/img/models/lightsaber-grip-wireframe.png'),
-                    require('@/img/models/lightsaber-grip.png'),
+                modelsArray: [
+                    {
+                        name: 'lightsaber',
+                        imgArray: [
+                            require('@/img/models/lightsaber-grip-wireframe.png'),
+                            require('@/img/models/lightsaber-grip.png')
+                        ]
+                    },
+                    {
+                        name: 'lightsaber',
+                        imgArray: [
+                            require('@/img/models/lightsaber-grip-wireframe.png'),
+                            require('@/img/models/lightsaber-grip.png')
+                        ]
+                    },
+                    {
+                        name: 'lightsaber',
+                        imgArray: [
+                            require('@/img/models/lightsaber-grip-wireframe.png'),
+                            require('@/img/models/lightsaber-grip.png')
+                        ]
+                    }
                 ]
             }
         }

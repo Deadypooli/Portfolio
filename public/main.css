@@ -309,6 +309,10 @@ main {
   pointer-events: none;
 }
 
+.model-container {
+  margin-bottom: 50px;
+}
+
 .headline-projects {
   max-width: 1400px;
   margin-inline: auto;

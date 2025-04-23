@@ -39,33 +39,6 @@
         name: 'BananaDrama',
         data() {
             return {
-                folderArray: [
-                    [
-                        require('@/img/projects/cow-wireframe.png'),
-                        require('@/img/projects/cow-render.png'),
-                        require('@/img/projects/cow.gif')
-                    ],
-                    [
-                        require('@/img/projects/tiger-wireframe.png'),
-                        require('@/img/projects/tiger-render.png'),
-                        require('@/img/projects/tiger.gif')
-                    ],
-                    [
-                        require('@/img/projects/giraffe-wireframe.png'),
-                        require('@/img/projects/giraffe-render.png'),
-                        require('@/img/projects/giraffe.gif')
-                    ],
-                    [
-                        require('@/img/projects/lion-wireframe.png'),
-                        require('@/img/projects/lion-render.png'),
-                        require('@/img/projects/lion.gif')
-                    ],
-                    [
-                        require('@/img/projects/cockatoo-wireframe.png'),
-                        require('@/img/projects/cockatoo-render.png'),
-                        require('@/img/projects/cockatoo.gif')
-                    ]
-                ],
                 animalsArray: [
                     {
                         name: 'Cow',
