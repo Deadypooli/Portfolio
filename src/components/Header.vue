@@ -7,43 +7,48 @@
 			</a>
 			-->
 			<div class="pages">
-				<a href="/">
-					<div>
+				<div>
+					<a href="/">
 						Home
-					</div>
-				</a>
-				<a href="/conceptArt">
-					<div>
+					</a>
+				</div>
+				<div>
+					<a href="/conceptArt">
 						Concept Art
-					</div>
-				</a>
-				<a href="/illustrations">
-					<div>
+					</a>
+				</div>
+				<div>
+					<a href="/illustrations">
 						Illustrations
-					</div>
-				</a>
-				<a href="/models">
-					<div>
+					</a>
+				</div>
+				<div>
+					<a href="/models">
 						Models
-					</div>
-				</a>
-				<a href="/projects">
-					<div>
+					</a>
+				</div>
+				<div class="dropdown">
+					<div class="dropdown-btn">
 						Projects
 					</div>
-				</a>
+					<div class="dropdown-items">
+						<a href="/bananaDrama">
+							Banana Drama
+						</a>
+					</div>
+				</div>
 			</div>
 			<div class="info">
-				<a href="/neofyInfo">
-					<div>
+				<div>
+					<a href="/neofyInfo">
 						Neofy Info
-					</div>
-				</a>
-				<a href="https://www.instagram.com/ne0fy/" target="_blank">
-					<div>
+					</a>
+				</div>
+				<div>
+					<a href="https://www.instagram.com/ne0fy/" target="_blank">
 						Insta
-					</div>
-				</a>
+					</a>
+				</div>
 			</div>
 			<!--
 			<a href="https://www.instagram.com/ne0fy/" target="_blank">
@@ -57,6 +62,6 @@
 <script>
 
 export default {
-  name: 'Header',
+  name: 'Header'
 }
 </script>

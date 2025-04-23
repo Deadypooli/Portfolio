@@ -164,7 +164,20 @@ main {
   display: flex;
 }
 
-a {
+.dropdown-items {
+  position: absolute;
+  display: none;
+  background: aliceblue;
+  border-radius: 5px;
+}
+
+.dropdown-items a {
+  display: block;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.pages div, .info div {
   margin-inline: 10px;
 }
 
@@ -178,6 +191,10 @@ a {
 .insta-icon {
   width: 26px;
   height: 26px;
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
 }
 
 .illustrations-container {

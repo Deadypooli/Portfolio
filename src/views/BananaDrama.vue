@@ -3,6 +3,8 @@
     <main>
         <div class="headline-projects">
             <h1>Banana Drama</h1>
+            Banana Drama is a RTS game on steam. The first game i got to work on and it was a lot of fun for me.
+            I really liked letting out my creativity and make fun animals, that players could actually play.
         </div>
         <div
         v-for="element in animalsArray"
@@ -34,7 +36,7 @@
 
     export default {
         components: { Header, Model },
-        name: 'Projects',
+        name: 'BananaDrama',
         data() {
             return {
                 folderArray: [
