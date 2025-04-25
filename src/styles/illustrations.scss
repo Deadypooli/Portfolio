@@ -45,3 +45,17 @@
 .hidden {
     visibility: hidden;
 }
+
+@media screen and (max-width: 800px) {
+    .illustrations-container {
+        position: relative;
+    }
+    .slider-items {
+        flex-direction: column;
+        transform: translateX(0) !important;
+    }
+    .nav {
+        display: none;
+    }
+    
+}
