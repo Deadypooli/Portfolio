@@ -154,7 +154,6 @@ main {
   padding: 20px;
   width: 100%;
   max-width: 1400px;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,7 +176,7 @@ main {
   padding-top: 10px;
 }
 
-.pages div, .info div {
+.header-item {
   margin-inline: 10px;
 }
 
@@ -197,6 +196,49 @@ main {
   display: block;
 }
 
+.header-burger {
+  margin-bottom: 20px;
+  display: none;
+  text-align: end;
+  z-index: 20;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding-inline: 0;
+  }
+
+  .header-burger {
+    display: block;
+    position: relative;
+    right: 20px;
+  }
+
+  .pages {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .header-items {
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: aliceblue;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .dropdown-items {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .hidden-menu {
+    display: flex;
+  }
+}
 .illustrations-container {
   position: fixed;
   top: 0;
