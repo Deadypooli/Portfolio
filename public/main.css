@@ -172,8 +172,7 @@ main {
 
 .dropdown-items a {
   display: block;
-  padding-right: 10px;
-  padding-top: 10px;
+  padding: 5px 20px;
 }
 
 .header-item {
@@ -235,6 +234,10 @@ main {
     margin-left: 20px;
   }
 
+  .dropdown-items a {
+    padding: 5px 0;
+  }
+
   .hidden-menu {
     display: flex;
   }
@@ -275,7 +278,7 @@ main {
   z-index: 10;
   width: 50px;
   height: 50px;
-  background-color: aqua;
+  background-color: #fff;
   border-radius: 5px;
   border: none;
   margin: 20px;
@@ -356,7 +359,7 @@ main {
 
 .slider-button {
   position: absolute;
-  background-color: aqua;
+  background-color: #fff;
   padding: 8px;
   border-radius: 100%;
   top: 50%;
@@ -408,6 +411,23 @@ main {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 800px) {
+  .gif-container, .image-container {
+    flex-direction: column;
+  }
+
+  .gif-image {
+    width: 100%;
+  }
+
+  .image-description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
 .concept-container {
   display: block;
   position: relative;

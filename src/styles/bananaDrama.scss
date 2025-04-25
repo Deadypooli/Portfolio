@@ -36,3 +36,19 @@
     width: 50%;
     margin-right: 50px;
 }
+
+@media screen and (max-width: 800px) {
+    .gif-container, .image-container {
+        flex-direction: column;
+    }
+    .gif-image {
+        width: 100%;
+    }
+    .image-description {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
