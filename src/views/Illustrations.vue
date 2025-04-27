@@ -25,13 +25,13 @@
                 class="illustration-btn"
                 :class="{hidden: !(slidePosition < 0)}"
                 v-on:click="slide(+1)">
-                <img src="../logo/angle-left.svg" class="header-icon insta-icon">
+                <img src="../logo/angle-left.svg" class="header-icon insta-icon illustration-icon">
             </button>
             <button
                 class="illustration-btn"
                 :class="{hidden: !(-slidePosition < (imgArray.length - 1))}"
                 v-on:click="slide(-1)">
-                <img src="../logo/angle-right.svg" class="header-icon insta-icon">
+                <img src="../logo/angle-right.svg" class="header-icon insta-icon illustration-icon">
             </button>
             </div>
         </div>

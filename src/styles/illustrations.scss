@@ -34,12 +34,16 @@
 
 .illustration-btn {
     z-index: 10;
-    background-color: #FFC1DA;
+    background-color: #9ae2f8;
     border-radius: 5px;
     border: none;
     margin-inline: 20px;
     padding: 10px;
     cursor: pointer;
+}
+
+.illustration-icon {
+    filter: invert(100%);
 }
 
 .hidden {
