@@ -4,7 +4,7 @@
 		<div 
 		class="header-burger"
 		@click="toggleMenu">
-			menu
+			<img src="../logo/bars.svg" class="header-icon insta-icon">
 		</div>
 		<div
 		:class="{'hidden-menu': menuHidden}"
@@ -12,7 +12,7 @@
 			<div class="pages">
 				<div class="header-item">
 					<a href="/">
-						Home
+						<img src="../logo/logo.svg" class="header-icon insta-icon">
 					</a>
 				</div>
 				<div class="header-item">
@@ -55,13 +55,10 @@
 				</div>
 				<div class="header-item">
 					<a href="https://www.instagram.com/ne0fy/" target="_blank">
-						Insta
+						<img src="../logo/insta.svg" class="header-icon insta-icon">
 					</a>
 				</div>
 			</div>
-			<!-- <a href="https://www.instagram.com/ne0fy/" target="_blank">
-				<img src="../logo/instagram.svg" class="header-icon insta-icon">
-			</a> -->
 		</div>
 	</header>
 </template>

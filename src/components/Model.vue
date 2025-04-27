@@ -18,7 +18,7 @@
             @input="(e) => slideImg(e)"
             />
             <div class="slider-button">
-                |||
+                <img src="../logo/bars.svg" class="header-icon insta-icon model-icon">
             </div>
         </div>
     </div>

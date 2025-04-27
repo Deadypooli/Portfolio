@@ -23,7 +23,7 @@
 .slider {
     position: absolute;
     inset: 0;
-    cursor: pointer;
+    cursor: grab;
     opacity: 0;
     /* for Firefox */
     width: 100%;
@@ -34,14 +34,21 @@
 .slider-button {
     position: absolute;
     background-color: #fff;
-    padding: 8px;
     border-radius: 100%;
+    padding: 10px;
     top: 50%;
     left: var(--position);
     transform: translate(-50%, -50%);
     pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .model-container {
     margin-bottom: 50px;
+}
+
+.model-icon {
+    transform: rotate(90deg);
 }
