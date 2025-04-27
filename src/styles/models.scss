@@ -33,7 +33,7 @@
 
 .slider-button {
     position: absolute;
-    background-color: #fff;
+    background-color: #FFC1DA;
     border-radius: 100%;
     padding: 10px;
     top: 50%;
@@ -51,4 +51,10 @@
 
 .model-icon {
     transform: rotate(90deg);
+}
+
+@media (max-width: 800px) {
+    .slider-image {
+        border-radius: 0;
+    }
 }

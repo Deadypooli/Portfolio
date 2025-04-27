@@ -44,3 +44,9 @@ main {
   ::-webkit-scrollbar-thumb:hover {
 	background: #dce5ee;
   }
+
+  @media (max-width: 800px) {
+	main {
+		margin-inline: 0;
+	}
+  }

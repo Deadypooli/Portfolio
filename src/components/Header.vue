@@ -1,6 +1,10 @@
 <template>
 	<header class="header">
-		
+		<div class="header-item item-phone">
+					<a href="/">
+						<img src="../logo/logo.svg" class="header-icon insta-icon">
+					</a>
+				</div>
 		<div 
 		class="header-burger"
 		@click="toggleMenu">
@@ -10,7 +14,7 @@
 		:class="{'hidden-menu': menuHidden}"
 		class="header-items">
 			<div class="pages">
-				<div class="header-item">
+				<div class="header-item item-desktop">
 					<a href="/">
 						<img src="../logo/logo.svg" class="header-icon insta-icon">
 					</a>
@@ -35,12 +39,6 @@
 						Projects
 					</div>
 					<div class="dropdown-items">
-						<a href="/bananaDrama">
-							Banana Drama
-						</a>
-						<a href="/bananaDrama">
-							Banana Drama
-						</a>
 						<a href="/bananaDrama">
 							Banana Drama
 						</a>

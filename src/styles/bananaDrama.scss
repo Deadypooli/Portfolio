@@ -38,11 +38,15 @@
 }
 
 @media screen and (max-width: 800px) {
+    .headline-projects {
+        margin-inline: 20px;
+    }
     .gif-container, .image-container {
         flex-direction: column;
     }
     .gif-image {
         width: 100%;
+        border-radius: 0;
     }
     .image-description {
         width: 100%;
@@ -50,5 +54,6 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        padding-inline: 20px;
     }
 }
