@@ -13,14 +13,9 @@
 }
 
 .display-img {
+	border-radius: 5px;
 	display: block;
 	max-height: 100%;
 	max-width: 85%;
 	box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
-}
-
-@media (max-width: 761px) {
-	.display-img {
-		max-width: 100%;
-	}
 }

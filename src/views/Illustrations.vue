@@ -1,5 +1,9 @@
 <template>
     <Header />
+    <Display
+	:selectedImage="selectedImage"
+	v-if="clicked"
+	@clicked="toggleModal(key)"/>
     <div class="illustrations-container">
         <div class="illustrations-slider">
 
@@ -12,7 +16,8 @@
                 v-for="key in imgArray"
                 :src="key"
                 ref="image"
-                :key="key.url">
+                :key="key.url"
+                @click="toggleModal(key)">
             
             </div>
             <div class="nav">
@@ -35,13 +40,16 @@
 
 <script>
 import Header from '@/components/Header.vue';
+import Display from '@/components/Display.vue';
 
 export default {
-    components: { Header },
+    components: { Header, Display },
 
     name: 'Illustrations',
 	data () {
 		return {
+            selectedImage: null,
+            clicked: false,
             direction: +1,
             slidePosition: 0,
             count: 0,
@@ -58,9 +66,7 @@ export default {
     mounted() {
         for (var key in this.imgArray) {
             this.imgWidth = this.$refs['image'][key].width;
-            
         }
-        
     },
     methods: {
 		slide (direction) {
@@ -74,7 +80,11 @@ export default {
             this.$refs.sliderItems.style.transform = 'translateX(' + this.count + 'px)';
             
             this.slidePosition = this.slidePosition + direction;
-        }
+        },
+        toggleModal (key) {			
+			this.selectedImage = key;
+			this.clicked = !this.clicked;
+		}
 	}
 }
 </script>
