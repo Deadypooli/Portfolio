@@ -5,8 +5,8 @@
 
 <style>
 @font-face {
-  font-family: "BebasNeue";
-  src: local("BebasNeue"),
-   url(./fonts/BebasNeue-Regular.ttf) format("truetype");
+  font-family: "Futura";
+  src: local("Futura"),
+   url(./fonts/FuturaCyrillicBook.ttf) format("truetype");
 }
 </style>
