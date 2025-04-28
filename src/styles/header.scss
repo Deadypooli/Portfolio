@@ -7,25 +7,42 @@
 	background-color: aliceblue;
 }
 
-.header-items {
-	margin-inline: auto;
-	padding: 20px 0;
-	width: 100%;
-	max-width: 1400px;
+.mobile-nav {
+	display: none;
+	margin-inline: 20px;
+	z-index: 20;
+}
+
+.nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	max-width: 1400px;
+	padding: 20px 0;
+	margin-inline: auto;
+	background-color: aliceblue;
+}
+
+.header-svg {
+	display: block;
+	width: 26px;
+	height: 26px;
 }
 
 .pages, .info {
 	display: flex;
 }
 
+.page-link, .logo-desktop, .dropdown {
+	margin-inline: 10px;
+}
+
 .dropdown-items {
-	position: absolute;
 	display: none;
-	background: aliceblue;
+	position: absolute;
 	border-radius: 5px;
+	background: aliceblue;
 	transform: translateX(-20px);
 }
 
@@ -34,75 +51,53 @@
 	padding: 5px 20px;
 }
 
-.header-item {
-	margin-inline: 10px;
-}
-
-.header-icon {
-	display: block;
-	padding: 0;
-	width: 36px;
-	height: 36px;
-}
-
-.insta-icon {
-	width: 26px;
-	height: 26px;
-}
-
 .dropdown:hover .dropdown-items{
 	display: block;
 }
 
-.header-burger {
-	display: none;
-	z-index: 20;
-}
 
-.item-phone {
-	display: none;
-}
-
-@media screen and (max-width: 800px) {
-	.item-desktop {
-		display: none;
-	}
-	.item-phone {
-		margin-left: 20px;
-		display: block;
-	}
+@media (max-width: 768px) {
 	.header {
-		padding-inline: 0;
 		display: flex;
 		justify-content: space-between;
+		padding-inline: 0;
 	}
-	.header-burger {
+
+	.nav {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+		position: absolute;
+		top: 0;
+		height: 100vh;
+		padding-left: 10px;
+	}
+	
+	.mobile-nav {
 		display: block;
-		margin-right: 20px;
 	}
+
+	.hidden-nav {
+		display: flex;
+	}
+
 	.pages {
 		flex-direction: column;
 		margin-top: 50px;
 	}
-	.header-items {
+	
+	.logo-desktop {
 		display: none;
-		position: absolute;
-		top: 0;
-		background-color: aliceblue;
-		height: 100vh;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: start;
 	}
+
 	.dropdown-items {
 		display: block;
 		margin-left: 20px;
 		transform: translateX(0);
 	}
+
 	.dropdown-items a {
 		padding: 5px 0;
-	}
-	.hidden-menu {
-		display: flex;
 	}
 }

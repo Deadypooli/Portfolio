@@ -1,8 +1,6 @@
 <template>
   <Header />
-  <div class="hero-container">
-    <img :src="img" @load="imgLoaded()" ref="heroImg" class="hero-img hide" />
-  </div>
+    <img :src="img" class="hero-img" />
 </template>
 
 <script>
@@ -17,11 +15,6 @@ export default {
     return {
       img: require('@/img/illustrations/fall.jpg'),
     };
-  },
-  methods: {
-    imgLoaded() {
-      this.$refs.heroImg.classList.remove('hide');
-    }
-  },
+  }
 };
 </script>

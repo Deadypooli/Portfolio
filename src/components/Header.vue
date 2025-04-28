@@ -1,40 +1,38 @@
 <template>
 	<header class="header">
-		<div class="header-item item-phone">
-					<a href="/">
-						<img src="../logo/logo.svg" class="header-icon insta-icon">
-					</a>
-				</div>
-		<div 
-		class="header-burger"
+		<a href="/" class="mobile-nav">
+			<img src="../logo/logo.svg" class="header-svg">
+		</a>
+		<div
+		class="mobile-nav"
 		@click="toggleMenu">
-			<img src="../logo/bars.svg" class="header-icon insta-icon">
+			<img src="../logo/bars.svg" class="header-svg">
 		</div>
 		<div
-		:class="{'hidden-menu': menuHidden}"
-		class="header-items">
+		:class="{'hidden-nav': menuHidden}"
+		class="nav">
 			<div class="pages">
-				<div class="header-item item-desktop">
+				<div class="logo-desktop">
 					<a href="/">
-						<img src="../logo/logo.svg" class="header-icon insta-icon">
+						<img src="../logo/logo.svg" class="header-svg">
 					</a>
 				</div>
-				<div class="header-item">
+				<div class="page-link">
 					<a href="/conceptArt">
 						Concept Art
 					</a>
 				</div>
-				<div class="header-item">
+				<div class="page-link">
 					<a href="/illustrations">
 						Illustrations
 					</a>
 				</div>
-				<div class="header-item">
+				<div class="page-link">
 					<a href="/models">
 						Models
 					</a>
 				</div>
-				<div class="dropdown header-item">
+				<div class="dropdown">
 					<div class="dropdown-btn">
 						Projects
 					</div>
@@ -46,16 +44,12 @@
 				</div>
 			</div>
 			<div class="info">
-				<div class="header-item">
-					<a href="/neofyInfo">
-						Neofy Info
-					</a>
-				</div>
-				<div class="header-item">
-					<a href="https://www.instagram.com/ne0fy/" target="_blank">
-						<img src="../logo/insta.svg" class="header-icon insta-icon">
-					</a>
-				</div>
+				<a class="page-link" href="/neofyInfo">
+					Neofy Info
+				</a>
+				<a class="page-link" href="https://www.instagram.com/ne0fy/" target="_blank">
+					<img src="../logo/insta.svg" class="header-svg">
+				</a>
 			</div>
 		</div>
 	</header>

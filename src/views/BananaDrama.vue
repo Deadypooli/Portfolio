@@ -1,7 +1,7 @@
 <template>
     <Header />
     <main>
-        <div class="headline-projects">
+        <div class="banana-headline">
             <h1>Banana Drama</h1>
             Banana Drama is a RTS game on steam. The first game i got to work on and it was a lot of fun for me.
             I really liked letting out my creativity and make fun animals, that players could actually play.
@@ -9,20 +9,20 @@
         <div
         v-for="element in animalsArray"
         :key="element"
-        class="project-container">
-            <div class="gif-container">
+        class="banana-container">
+            <div class="banana-gif-container">
                 <img
-                class="gif-image" 
+                class="banana-gif" 
                 :src="element.gif">
-                <div class="gif-text">
+                <div class="banana-gif-text">
                     <h1>The {{element.name}}</h1>
                 </div>
             </div>
-            <div class="image-container">
-                <div class="image-description">
-                    {{element.description}}
+            <div class="banana-image-container">
+                <div class="banana-image-description">
+                    <p>{{element.description}}</p>
                 </div>
-                <Model
+                <Slider
                 :imageArray="element.imgArray"
                 />
             </div>
@@ -32,10 +32,10 @@
 
 <script>
     import Header from '@/components/Header.vue';
-    import Model from '@/components/Model.vue';
+    import Slider from '@/components/Slider.vue';
 
     export default {
-        components: { Header, Model },
+        components: { Header, Slider },
         name: 'BananaDrama',
         data() {
             return {

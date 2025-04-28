@@ -1,13 +1,13 @@
 .info-text {
     max-width: 700px;
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .text-center {
     text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .info-text {
         margin-inline: 20px;
     }

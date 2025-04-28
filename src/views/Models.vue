@@ -5,7 +5,7 @@
         class="model-container"
         v-for="model in modelsArray"
         :key="model">
-            <Model
+            <Slider
             :imageArray="model.imgArray"
             />
         </div>
@@ -14,10 +14,10 @@
 
 <script>
     import Header from '@/components/Header.vue';
-    import Model from '@/components/Model.vue';
+    import Slider from '@/components/Slider.vue';
 
     export default {
-        components: { Header, Model },
+        components: { Header, Slider },
         name: 'Models',
         data () {
             return {

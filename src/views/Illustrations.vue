@@ -5,14 +5,14 @@
 	v-if="clicked"
 	@clicked="toggleModal(key)"/>
     <div class="illustrations-container">
-        <div class="illustrations-slider">
+        <div class="illustrations-carousel">
 
             <div
-                ref="sliderItems"
-                class="slider-items">
+                ref="carouselItems"
+                class="carousel-items">
             
                 <img 
-                class="item"
+                class="image"
                 v-for="key in imgArray"
                 :src="key"
                 ref="image"
@@ -20,18 +20,18 @@
                 @click="toggleModal(key)">
             
             </div>
-            <div class="nav">
+            <div class="carousel-controls">
                 <button
                 class="illustration-btn"
-                :class="{hidden: !(slidePosition < 0)}"
+                :class="{hidden: !(carouselPosition < 0)}"
                 v-on:click="slide(+1)">
-                <img src="../logo/angle-left.svg" class="header-icon insta-icon illustration-icon">
+                <img src="../logo/angle-left.svg" class="illustration-svg">
             </button>
             <button
                 class="illustration-btn"
-                :class="{hidden: !(-slidePosition < (imgArray.length - 1))}"
+                :class="{hidden: !(-carouselPosition < (imgArray.length - 1))}"
                 v-on:click="slide(-1)">
-                <img src="../logo/angle-right.svg" class="header-icon insta-icon illustration-icon">
+                <img src="../logo/angle-right.svg" class="illustration-svg">
             </button>
             </div>
         </div>
@@ -51,7 +51,7 @@ export default {
             selectedImage: null,
             clicked: false,
             direction: +1,
-            slidePosition: 0,
+            carouselPosition: 0,
             count: 0,
             imgWidth: 0,
 			imgArray: [
@@ -71,15 +71,15 @@ export default {
     methods: {
 		slide (direction) {
             if (direction == -1) {
-                this.count = this.count + (direction * (this.$refs['image'][-this.slidePosition].width + 40));
+                this.count = this.count + (direction * (this.$refs['image'][-this.carouselPosition].width + 40));
                 
             } else {
-                this.count = this.count + (direction * (this.$refs['image'][-(this.slidePosition + 1)].width + 40));
+                this.count = this.count + (direction * (this.$refs['image'][-(this.carouselPosition + 1)].width + 40));
                 
             }
-            this.$refs.sliderItems.style.transform = 'translateX(' + this.count + 'px)';
+            this.$refs.carouselItems.style.transform = 'translateX(' + this.count + 'px)';
             
-            this.slidePosition = this.slidePosition + direction;
+            this.carouselPosition = this.carouselPosition + direction;
         },
         toggleModal (key) {			
 			this.selectedImage = key;

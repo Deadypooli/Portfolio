@@ -17,36 +17,28 @@ main {
 	margin-inline: 20px;
 }
 
-.noscroll {
-	overflow: hidden;
-}
-
-.hide {
-	display: none;
-}
-
 ::-webkit-scrollbar {
 	width: 15px;
 	height: 0;
-  }
+}
  
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background: aliceblue;
-
-  }
+}
   
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #dce5ee;
 	border-radius: 100px;
 	border: 3.5px solid #f0f8ff;
-  }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
 	background: #dce5ee;
-  }
+}
 
-  @media (max-width: 800px) {
+
+@media (max-width: 768px) {
 	main {
 		margin-inline: 0;
 	}
-  }
+}
