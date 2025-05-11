@@ -39,7 +39,7 @@ jobs:
         run: |
           npm update
           npm install yarn
-          yarn install --frozen-lockfile
+          yarn install
           yarn build
 
 # Please do not touch the following action
