@@ -55,11 +55,11 @@ export default {
             count: 0,
             imgWidth: 0,
 			imgArray: [
-                require ('@/img/illustrations/rage.png'),
+                require ('@/img/illustrations/rage.jpg'),
 				require ('@/img/illustrations/fall.jpg'),
-                require ('@/img/illustrations/hotter.png'),
-                require ('@/img/illustrations/jump.png'),
-                require ('@/img/illustrations/pink-frog.png'),
+                require ('@/img/illustrations/hotter.jpg'),
+                require ('@/img/illustrations/jump.jpg'),
+                require ('@/img/illustrations/pink-frog.jpg'),
 			]
 		}
 	},

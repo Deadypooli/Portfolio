@@ -25,29 +25,29 @@
                     {
                         name: 'lightsaber',
                         imgArray: [
-                            require('@/img/models/lightsaber-grip-wireframe.png'),
-                            require('@/img/models/lightsaber-grip.png')
+                            require('@/img/models/lightsaber-grip-wireframe.jpg'),
+                            require('@/img/models/lightsaber-grip.jpg')
                         ]
                     },
                     {
                         name: 'eye',
                         imgArray: [
-                            require('@/img/models/eye-wireframe.png'),
-                            require('@/img/models/eye.png')
+                            require('@/img/models/eye-wireframe.jpg'),
+                            require('@/img/models/eye.jpg')
                         ]
                     },
                     {
                         name: 'anniversary',
                         imgArray: [
-                            require('@/img/models/anniversary-wireframe.png'),
-                            require('@/img/models/anniversary.png')
+                            require('@/img/models/anniversary-wireframe.jpg'),
+                            require('@/img/models/anniversary.jpg')
                         ]
                     },
                     {
                         name: 'otter-sweater',
                         imgArray: [
-                            require('@/img/models/otter-sweater-wireframe.png'),
-                            require('@/img/models/otter-sweater.png')
+                            require('@/img/models/otter-sweater-wireframe.jpg'),
+                            require('@/img/models/otter-sweater.jpg')
                         ]
                     }
                 ]

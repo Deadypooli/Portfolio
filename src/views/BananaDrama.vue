@@ -45,19 +45,19 @@
                         description: 'The Cow intimidates all oponents with its ominent udder swing',
                         gif: require('@/img/projects/cow.gif'),
                         imgArray: [
-                            require('@/img/projects/cow-wireframe.png'),
-                            require('@/img/projects/cow-render.png')
+                            require('@/img/projects/cow-wireframe.jpg'),
+                            require('@/img/projects/cow-render.jpg')
                         ],
-                        wireframe: require('@/img/projects/cow-wireframe.png'),
-                        render: require('@/img/projects/cow-render.png'),
+                        wireframe: require('@/img/projects/cow-wireframe.jpg'),
+                        render: require('@/img/projects/cow-render.jpg'),
                     },
                     {
                         name: 'Tiger',
                         description: 'All foes with bow down by the cuteness of this tiger kitten',
                         gif: require('@/img/projects/tiger.gif'),
                         imgArray: [
-                            require('@/img/projects/tiger-wireframe.png'),
-                            require('@/img/projects/tiger-render.png')
+                            require('@/img/projects/tiger-wireframe.jpg'),
+                            require('@/img/projects/tiger-render.jpg')
                         ],
                     },
                     {
@@ -65,8 +65,8 @@
                         description: 'He will scratch out the sense of evil in you',
                         gif: require('@/img/projects/lion.gif'),
                         imgArray: [
-                            require('@/img/projects/lion-wireframe.png'),
-                            require('@/img/projects/lion-render.png')
+                            require('@/img/projects/lion-wireframe.jpg'),
+                            require('@/img/projects/lion-render.jpg')
                         ],
                     },
                     {
@@ -74,8 +74,8 @@
                         description: 'The cockatoo swirls all his enemies to the ground with his graceful jump',
                         gif: require('@/img/projects/cockatoo.gif'),
                         imgArray: [
-                            require('@/img/projects/cockatoo-wireframe.png'),
-                            require('@/img/projects/cockatoo-render.png')
+                            require('@/img/projects/cockatoo-wireframe.jpg'),
+                            require('@/img/projects/cockatoo-render.jpg')
                         ],
                     },
                     {
@@ -83,8 +83,8 @@
                         description: 'Watch out, the giraffes neck might be longer than you think and hell of a weapon when using it as helicopter blades',
                         gif: require('@/img/projects/giraffe.gif'),
                         imgArray: [
-                            require('@/img/projects/giraffe-wireframe.png'),
-                            require('@/img/projects/giraffe-render.png')
+                            require('@/img/projects/giraffe-wireframe.jpg'),
+                            require('@/img/projects/giraffe-render.jpg')
                         ],
                     }
                 ]

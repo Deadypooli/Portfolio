@@ -21,11 +21,11 @@
         data () {
 		return {
 			imgArray: [
-				require ('@/img/concepts/fir.png'),
-				require ('@/img/concepts/lorikeet.png'),
-				require ('@/img/concepts/penguin.png'),
-				require ('@/img/concepts/red-spider.png'),
-				require ('@/img/concepts/Rose.png'),
+				require ('@/img/concepts/fir.jpg'),
+				require ('@/img/concepts/lorikeet.jpg'),
+				require ('@/img/concepts/penguin.jpg'),
+				require ('@/img/concepts/red-spider.jpg'),
+				require ('@/img/concepts/Rose.jpg'),
                 ]
             }
         },
