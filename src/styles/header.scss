@@ -39,8 +39,10 @@
 }
 
 .dropdown-items {
-	display: none;
-	position: absolute;
+	// switch again after adding more projects
+	// display: none;
+	// position: absolute;
+	padding-inline: 10px;
 	border-radius: 5px;
 	background: aliceblue;
 	transform: translateX(-20px);
@@ -48,7 +50,8 @@
 
 .dropdown-items a {
 	display: block;
-	padding: 5px 20px;
+	// switch again after adding more projects
+	// padding: 5px 20px;
 }
 
 .dropdown:hover .dropdown-items{
@@ -93,11 +96,13 @@
 
 	.dropdown-items {
 		display: block;
-		margin-left: 20px;
+		// switch again after adding more projects
+		// margin-left: 20px;
 		transform: translateX(0);
 	}
 
-	.dropdown-items a {
-		padding: 5px 0;
-	}
+	// .dropdown-items a {
+		// switch again after adding more projects
+		// padding: 5px 0;
+	// }
 }

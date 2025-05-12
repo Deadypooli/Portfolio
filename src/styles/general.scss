@@ -17,6 +17,10 @@ main {
 	margin-inline: 20px;
 }
 
+h1, p {
+	margin: 0;
+}
+
 ::-webkit-scrollbar {
 	width: 15px;
 	height: 0;

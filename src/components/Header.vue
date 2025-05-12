@@ -32,15 +32,15 @@
 						Models
 					</a>
 				</div>
-				<div class="dropdown">
-					<div class="dropdown-btn">
+				<!-- <div class="dropdown"> -->
+					<!-- <div class="dropdown-btn">
 						Projects
-					</div>
+					</div> -->
 					<div class="dropdown-items">
 						<a href="/bananaDrama">
 							Banana Drama
 						</a>
-					</div>
+					<!-- </div> -->
 				</div>
 			</div>
 			<div class="info">

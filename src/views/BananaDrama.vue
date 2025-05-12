@@ -3,8 +3,8 @@
     <main>
         <div class="banana-headline">
             <h1>Banana Drama</h1>
-            Banana Drama is a RTS game on steam. The first game i got to work on and it was a lot of fun for me.
-            I really liked letting out my creativity and make fun animals, that players could actually play.
+            Banana Drama is a RTS game on steam. The first game I got to work on and it was a lot of fun for me.
+            I really liked being creative and create fun animal characters, that players could actually play.
         </div>
         <div
         v-for="element in animalsArray"

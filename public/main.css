@@ -19,6 +19,10 @@ main {
   margin-inline: 20px;
 }
 
+h1, p {
+  margin: 0;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
   height: 0;
@@ -81,6 +85,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .banana-container {
+    margin-bottom: 100px;
+  }
+
   .banana-headline {
     margin-inline: 20px;
   }
@@ -89,16 +97,22 @@ main {
     flex-direction: column;
   }
 
+  .banana-gif-container {
+    margin-bottom: 0;
+  }
+
   .banana-gif {
     width: 100%;
     border-radius: 0;
+    margin-bottom: 20px;
   }
 
   .banana-image-description {
     justify-content: center;
     width: 100%;
     padding-inline: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 }
 .concept-container {
@@ -180,8 +194,7 @@ main {
 }
 
 .dropdown-items {
-  display: none;
-  position: absolute;
+  padding-inline: 10px;
   border-radius: 5px;
   background: aliceblue;
   transform: translateX(-20px);
@@ -189,7 +202,6 @@ main {
 
 .dropdown-items a {
   display: block;
-  padding: 5px 20px;
 }
 
 .dropdown:hover .dropdown-items {
@@ -233,12 +245,7 @@ main {
 
   .dropdown-items {
     display: block;
-    margin-left: 20px;
     transform: translateX(0);
-  }
-
-  .dropdown-items a {
-    padding: 5px 0;
   }
 }
 .hero-img {
@@ -322,6 +329,7 @@ main {
     pointer-events: none;
     margin-inline: 0;
     border-radius: 0;
+    height: auto;
   }
 }
 .model-container {
