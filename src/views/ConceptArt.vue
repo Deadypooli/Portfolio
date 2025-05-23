@@ -7,7 +7,7 @@
                 class="concept-img"
                 v-for="key in imgArray"
                 :src="key"
-                :key="key.url">
+                :key="key">
         </div>
     </main>
 </template>
@@ -20,14 +20,16 @@
         name: 'ConceptArt',
         data () {
 		return {
-			imgArray: [
-				require ('@/img/concepts/fir.jpg'),
-				require ('@/img/concepts/lorikeet.jpg'),
-				require ('@/img/concepts/penguin.jpg'),
-				require ('@/img/concepts/red-spider.jpg'),
-				require ('@/img/concepts/Rose.jpg'),
-                ]
+			imgArray: [],
             }
         },
+        mounted () {
+            this.importAll(require.context('@/img/concepts/', true, /\.jpg$/));
+        },
+        methods: {
+            importAll(r) {
+                r.keys().forEach(key => (this.imgArray.push(r(key))));
+            },
+        }
     };
 </script>
