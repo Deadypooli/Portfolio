@@ -24,7 +24,7 @@
             }
         },
         mounted () {
-            this.importAll(require.context('@/img/concepts/', true, /\.jpg$/));
+            this.importAll(require.context('@/img/concepts/', true));
         },
         methods: {
             importAll(r) {
