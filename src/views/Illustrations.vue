@@ -16,7 +16,7 @@
                 v-for="key in imgArray"
                 :src="key"
                 ref="image"
-                :key="key.url"
+                :key="key"
                 @click="toggleModal(key)">
             
             </div>
@@ -26,8 +26,8 @@
                 :class="{hidden: !(carouselPosition < 0)}"
                 v-on:click="slide(+1)">
                 <img src="../logo/angle-left.svg" class="illustration-svg">
-            </button>
-            <button
+                </button>
+                <button
                 class="illustration-btn"
                 :class="{hidden: !(-carouselPosition < (imgArray.length - 1))}"
                 v-on:click="slide(-1)">
@@ -54,21 +54,21 @@ export default {
             carouselPosition: 0,
             count: 0,
             imgWidth: 0,
-			imgArray: [
-                require ('@/img/illustrations/rage.jpg'),
-				require ('@/img/illustrations/fall.jpg'),
-                require ('@/img/illustrations/hotter.jpg'),
-                require ('@/img/illustrations/jump.jpg'),
-                require ('@/img/illustrations/pink-frog.jpg'),
-			]
+			imgArray: []
 		}
 	},
     mounted() {
-        for (var key in this.imgArray) {
-            this.imgWidth = this.$refs['image'][key].width;
-        }
+        this.importAll(require.context('@/img/illustrations/', true));
+        setTimeout(() => {
+            for (var key in this.imgArray) {
+                this.imgWidth = this.$refs['image'][key].width;
+            }
+        }, 1);
     },
     methods: {
+        importAll(r) {
+                r.keys().forEach(key => (this.imgArray.push(r(key))));
+        },
 		slide (direction) {
             if (direction == -1) {
                 this.count = this.count + (direction * (this.$refs['image'][-this.carouselPosition].width + 40));
