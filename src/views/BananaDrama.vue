@@ -42,7 +42,7 @@
                 animalsArray: [
                     {
                         name: 'Cow',
-                        description: 'The Cow intimidates all oponents with its ominent udder swing',
+                        description: 'Cow (moo)! The cow is very self-confident and often likes to show off its beautiful udder!',
                         gif: require('@/img/projects/cow.gif'),
                         imgArray: [
                             require('@/img/projects/cow-wireframe.jpg'),
@@ -53,7 +53,7 @@
                     },
                     {
                         name: 'Tiger',
-                        description: 'All foes with bow down by the cuteness of this tiger kitten',
+                        description: 'Wow a tiger! He is particularly proud of his beautiful coat and regularly impresses many female tigers with it.',
                         gif: require('@/img/projects/tiger.gif'),
                         imgArray: [
                             require('@/img/projects/tiger-wireframe.jpg'),
@@ -62,7 +62,7 @@
                     },
                     {
                         name: 'Lion',
-                        description: 'He will scratch out the sense of evil in you',
+                        description: 'Roaarrrr - the lion! A lion throwing bananas is a little unusual at first glance, but he has learnt this effective fighting technique from the monke(y)s!',
                         gif: require('@/img/projects/lion.gif'),
                         imgArray: [
                             require('@/img/projects/lion-wireframe.jpg'),
@@ -71,7 +71,7 @@
                     },
                     {
                         name: 'Cockatoo',
-                        description: 'The cockatoo swirls all his enemies to the ground with his graceful jump',
+                        description: 'Fly cockatoo! Similar to his best friend "Kiki the cockatoo" his abilities are often underestimated due to his cute looks!',
                         gif: require('@/img/projects/cockatoo.gif'),
                         imgArray: [
                             require('@/img/projects/cockatoo-wireframe.jpg'),
@@ -80,7 +80,7 @@
                     },
                     {
                         name: 'Giraffe',
-                        description: 'Watch out, the giraffes neck might be longer than you think and hell of a weapon when using it as helicopter blades',
+                        description: 'Helicopter giraffe! Sometimes she gets so excited that she can\'t stop spinning her head like a helicopter. Let\'s hope she doesn\'t fly away!',
                         gif: require('@/img/projects/giraffe.gif'),
                         imgArray: [
                             require('@/img/projects/giraffe-wireframe.jpg'),
