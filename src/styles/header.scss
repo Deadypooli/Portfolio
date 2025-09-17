@@ -4,7 +4,10 @@
 	width: 100%;
 	padding: 20px;
 	z-index: 10;
-	background-color: aliceblue;
+	// background-color: aliceblue;
+	backdrop-filter: blur(10px);
+	// background-color: #d8a5f594;
+	background: linear-gradient(135deg,rgba(247, 199, 255, .4) 0%, rgba(199, 255, 254, .4) 100%);
 }
 
 .mobile-nav {
@@ -21,7 +24,7 @@
 	max-width: 1400px;
 	padding: 20px 0;
 	margin-inline: auto;
-	background-color: aliceblue;
+	// background-color: aliceblue;
 }
 
 .header-svg {

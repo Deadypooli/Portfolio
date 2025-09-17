@@ -1,7 +1,8 @@
 <template>
 	<header class="header">
 		<a href="/" class="mobile-nav">
-			<img src="../logo/logo.svg" class="header-svg">
+			<!-- <img src="../logo/logo.svg" class="header-svg"> -->
+			N
 		</a>
 		<div
 		class="mobile-nav"
@@ -14,7 +15,8 @@
 			<div class="pages">
 				<div class="logo-desktop">
 					<a href="/">
-						<img src="../logo/logo.svg" class="header-svg">
+						<!-- <img src="../logo/logo.svg" class="header-svg"> -->
+						N
 					</a>
 				</div>
 				<div class="page-link">
