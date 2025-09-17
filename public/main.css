@@ -60,7 +60,7 @@ h1, p {
 
 .banana-gif {
   width: 50%;
-  border-radius: 5px;
+  border-radius: 10px;
   transform: scaleX(-1);
 }
 
@@ -115,21 +115,31 @@ h1, p {
     margin-bottom: 50px;
   }
 }
-.concept-container {
+.personal-container {
+  margin-top: 20px;
   display: block;
   position: relative;
   max-width: 1400px;
   margin-inline: auto;
+  columns: 2;
+  column-gap: 20px;
 }
 
-.concept-img {
+.personal-img {
   width: 100%;
-  height: 100%;
+  border-radius: 10px;
   margin-bottom: 20px;
-  object-position: left;
-  object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .personal-container {
+    columns: 1;
+  }
+
+  .personal-img {
+    border-radius: 0;
+  }
+}
 .display-backdrop {
   position: fixed;
   top: 0;
@@ -160,7 +170,7 @@ h1, p {
   padding: 20px;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, rgba(247, 199, 255, 0.4) 0%, rgba(199, 255, 254, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(247, 199, 255, 0.6) 0%, rgba(199, 255, 254, 0.6) 100%);
 }
 
 .mobile-nav {
@@ -175,7 +185,6 @@ h1, p {
   align-items: center;
   width: 100%;
   max-width: 1400px;
-  padding: 20px 0;
   margin-inline: auto;
 }
 
@@ -246,7 +255,7 @@ h1, p {
     transform: translateX(0);
   }
 }
-.hero-img {
+.hero-vid {
   position: fixed;
   top: 0;
   height: 100%;
@@ -330,10 +339,6 @@ h1, p {
     height: auto;
   }
 }
-.model-container {
-  margin-bottom: 50px;
-}
-
 .info-text {
   max-width: 700px;
   margin-inline: auto;
@@ -358,7 +363,7 @@ h1, p {
 .slider-image {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   object-fit: cover;
   object-position: left;
 }

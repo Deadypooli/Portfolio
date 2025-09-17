@@ -20,30 +20,20 @@
 					</a>
 				</div>
 				<div class="page-link">
-					<a href="/conceptArt">
-						Concept Art
+					<a href="/personal">
+						Personal Art
 					</a>
 				</div>
 				<div class="page-link">
-					<a href="/illustrations">
-						Illustrations
+					<a href="/bananaDrama">
+						Banana Drama
 					</a>
 				</div>
-				<div class="page-link">
-					<a href="/models">
-						Models
+				<!-- <div class="page-link">
+					<a href="/asphira">
+						Asphira
 					</a>
-				</div>
-				<!-- <div class="dropdown"> -->
-					<!-- <div class="dropdown-btn">
-						Projects
-					</div> -->
-					<div class="dropdown-items">
-						<a href="/bananaDrama">
-							Banana Drama
-						</a>
-					<!-- </div> -->
-				</div>
+				</div> -->
 			</div>
 			<div class="info">
 				<a class="page-link" href="/neofyInfo">

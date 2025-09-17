@@ -8,24 +8,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/illustrations',
-    name: 'Illustrations',
-    component: () => import('../views/Illustrations.vue')
-  },
-  {
-    path: '/models',
-    name: 'Models',
-    component: () => import('../views/Models.vue')
-  },
-  {
     path: '/bananaDrama',
     name: 'BananaDrama',
     component: () => import('../views/BananaDrama.vue')
   },
   {
-    path: '/conceptArt',
-    name: 'ConceptArt',
-    component: () => import('../views/ConceptArt.vue')
+    path: '/personal',
+    name: 'Personal',
+    component: () => import('../views/Personal.vue')
   },
   {
     path: '/neofyInfo',

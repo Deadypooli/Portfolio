@@ -1,0 +1,25 @@
+.personal-container {
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    max-width: 1400px;
+    margin-inline: auto;
+    columns: 2;
+    column-gap: 20px;
+}
+
+.personal-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .personal-container {
+        columns: 1;
+    }
+    .personal-img {
+        border-radius: 0;
+    }
+}

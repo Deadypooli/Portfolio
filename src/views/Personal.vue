@@ -2,9 +2,9 @@
     <Header />
     <main>        
         <div
-        class="concept-container">
+        class="personal-container">
                 <img 
-                class="concept-img"
+                class="personal-img"
                 v-for="key in imgArray"
                 :src="key"
                 :key="key">
@@ -17,14 +17,14 @@
 
     export default {
         components: { Header },
-        name: 'ConceptArt',
+        name: 'Personal',
         data () {
 		return {
 			imgArray: [],
             }
         },
         mounted () {
-            this.importAll(require.context('@/img/concepts/', true));
+            this.importAll(require.context('@/img/personal/', true));
         },
         methods: {
             importAll(r) {
