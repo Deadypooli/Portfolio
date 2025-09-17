@@ -12,6 +12,13 @@
     width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.personal-img:hover {
+    scale: 1.01;
+    box-shadow: rgb(0 0 0 / 30%) 0px 40px 58px -16px, rgb(0 0 0 / 22%) 0px 30px 22px -10px;
 }
 
 
@@ -21,5 +28,9 @@
     }
     .personal-img {
         border-radius: 0;
+    }
+    .personal-img:hover {
+        scale: 1;
+        box-shadow: none;
     }
 }

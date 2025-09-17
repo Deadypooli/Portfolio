@@ -1,25 +1,31 @@
 <template>
     <Header />
-    <main>        
+    <Display
+	:selectedImage="selectedImage"
+	v-if="clicked"
+	@clicked="toggleModal(key)"/>
         <div
         class="personal-container">
                 <img 
                 class="personal-img"
                 v-for="key in imgArray"
                 :src="key"
-                :key="key">
+                :key="key"
+                @click="toggleModal(key)">
         </div>
-    </main>
 </template>
 
 <script>
     import Header from '@/components/Header.vue';
+    import Display from '@/components/Display.vue';
 
     export default {
-        components: { Header },
+        components: { Header, Display },
         name: 'Personal',
         data () {
 		return {
+            selectedImage: null,
+            clicked: false,
 			imgArray: [],
             }
         },
@@ -30,6 +36,10 @@
             importAll(r) {
                 r.keys().forEach(key => (this.imgArray.push(r(key))));
             },
+            toggleModal (key) {
+                this.selectedImage = key;
+                this.clicked = !this.clicked;
+            }
         }
     };
 </script>

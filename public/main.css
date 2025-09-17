@@ -129,6 +129,13 @@ h1, p {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.personal-img:hover {
+  scale: 1.01;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
 }
 
 @media (max-width: 768px) {
@@ -139,15 +146,17 @@ h1, p {
   .personal-img {
     border-radius: 0;
   }
+
+  .personal-img:hover {
+    scale: 1;
+    box-shadow: none;
+  }
 }
 .display-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   padding: 24px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +164,7 @@ h1, p {
 }
 
 .display-img {
-  border-radius: 5px;
+  border-radius: 10px;
   display: block;
   max-height: 100%;
   max-width: 100%;
