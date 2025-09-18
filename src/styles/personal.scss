@@ -6,6 +6,7 @@
     margin-inline: auto;
     columns: 2;
     column-gap: 20px;
+    padding-inline: 20px;
 }
 
 .personal-img {
@@ -25,6 +26,7 @@
 @media (max-width: 768px) {
     .personal-container {
         columns: 1;
+        padding-inline: 0;
     }
     .personal-img {
         border-radius: 0;

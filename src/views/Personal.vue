@@ -38,9 +38,11 @@
                 r.keys().forEach(key => (this.imgArray.push(r(key))));
             },
             toggleModal (key) {
-                this.selectedImage = key;
-                this.clicked = !this.clicked;
-                document.body.classList.add('noscroll');
+                if (window.innerWidth > 786) {    
+                    this.selectedImage = key;
+                    this.clicked = !this.clicked;
+                    document.body.classList.add('noscroll');
+                }
             }
         }
     };

@@ -62,6 +62,8 @@
 
 	.hidden-nav {
 		display: flex;
+		backdrop-filter: blur(10px);
+		background: linear-gradient(135deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
 	}
 
 	.pages {

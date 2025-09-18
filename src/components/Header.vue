@@ -59,7 +59,7 @@ export default {
   methods: {
 	toggleMenu () {
 		this.menuHidden = !this.menuHidden;
-		
+		document.body.classList.toggle('noscroll');
 	}
   }
 }
