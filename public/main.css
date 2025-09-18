@@ -150,21 +150,20 @@ h1, p {
 .display-backdrop {
   position: fixed;
   inset: 0;
-  padding: 24px;
   backdrop-filter: blur(10px);
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .display-img {
+  position: fixed;
+  inset: 0;
   border-radius: 10px;
-  display: block;
   max-height: 100%;
   max-width: 100%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 40px 58px -16px, rgba(0, 0, 0, 0.22) 0px 30px 22px -10px;
   object-fit: contain;
+  margin: auto;
+  z-index: 20;
 }
 
 .before-img, .after-img {
@@ -173,16 +172,17 @@ h1, p {
   max-width: 50%;
   cursor: pointer;
   border-radius: 10px;
+  top: 50%;
 }
 
 .before-img {
   left: 0;
-  transform: translateX(calc(-100% + 100px));
+  transform: translate(calc(-100% + 100px), -50%);
 }
 
 .after-img {
   right: 0;
-  transform: translateX(calc(100% - 100px));
+  transform: translate(calc(100% - 100px), -50%);
 }
 
 .header {
