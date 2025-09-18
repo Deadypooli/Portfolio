@@ -2,6 +2,7 @@
     <Header />
     <Display
 	:selectedImage="selectedImage"
+    :imgArray="imgArray"
 	v-if="clicked"
 	@clicked="toggleModal(key)"/>
         <div
@@ -39,6 +40,7 @@
             toggleModal (key) {
                 this.selectedImage = key;
                 this.clicked = !this.clicked;
+                document.body.classList.add('noscroll');
             }
         }
     };

@@ -4,9 +4,7 @@
 	width: 100%;
 	padding: 20px;
 	z-index: 10;
-	// background-color: aliceblue;
 	backdrop-filter: blur(10px);
-	// background-color: #d8a5f594;
 	background: linear-gradient(135deg,rgba(247, 199, 255, .6) 0%, rgba(199, 255, 254, .6) 100%);
 }
 
@@ -23,7 +21,6 @@
 	width: 100%;
 	max-width: 1400px;
 	margin-inline: auto;
-	// background-color: aliceblue;
 }
 
 .header-svg {
@@ -36,28 +33,8 @@
 	display: flex;
 }
 
-.page-link, .logo-desktop, .dropdown {
+.page-link, .logo-desktop {
 	margin-inline: 10px;
-}
-
-.dropdown-items {
-	// switch again after adding more projects
-	// display: none;
-	// position: absolute;
-	padding-inline: 10px;
-	border-radius: 5px;
-	// background: aliceblue;
-	// transform: translateX(-20px);
-}
-
-.dropdown-items a {
-	display: block;
-	// switch again after adding more projects
-	// padding: 5px 20px;
-}
-
-.dropdown:hover .dropdown-items{
-	display: block;
 }
 
 
@@ -95,16 +72,4 @@
 	.logo-desktop {
 		display: none;
 	}
-
-	.dropdown-items {
-		display: block;
-		// switch again after adding more projects
-		// margin-left: 20px;
-		transform: translateX(0);
-	}
-
-	// .dropdown-items a {
-		// switch again after adding more projects
-		// padding: 5px 0;
-	// }
 }

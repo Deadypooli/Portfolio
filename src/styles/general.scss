@@ -9,13 +9,8 @@ body {
 	font-family: 'Futura', Helvetica, Arial;
 	font-size: 20px;
 	margin: 0;
-	// background-color: #d7a5f5;
 	background: linear-gradient(135deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
 	overflow: overlay;
-}
-
-main {
-	margin-inline: 20px;
 }
 
 h1, p {
@@ -41,9 +36,6 @@ h1, p {
 	background: #dce5ee;
 }
 
-
-@media (max-width: 768px) {
-	main {
-		margin-inline: 0;
-	}
+.noscroll {
+	overflow: hidden;
 }

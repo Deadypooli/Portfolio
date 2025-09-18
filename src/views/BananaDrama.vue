@@ -1,33 +1,31 @@
 <template>
     <Header />
-    <main>
-        <div class="banana-headline">
-            <h1>Banana Drama</h1>
-            Banana Drama is a RTS game on steam and the first game I got to work on. It was a lot of fun for me.
-            I really liked being creative and design fun animal characters, that players can actually play.
-        </div>
-        <div
-        v-for="element in animalsArray"
-        :key="element"
-        class="banana-container">
-            <div class="banana-gif-container">
-                <img
-                class="banana-gif" 
-                :src="element.gif">
-                <div class="banana-gif-text">
-                    <h1>The {{element.name}}</h1>
-                </div>
-            </div>
-            <div class="banana-image-container">
-                <div class="banana-image-description">
-                    <p>{{element.description}}</p>
-                </div>
-                <Slider
-                :imageArray="element.imgArray"
-                />
+    <div class="banana-headline">
+        <h1>Banana Drama</h1>
+        Banana Drama is a RTS game on steam and the first game I got to work on. It was a lot of fun for me.
+        I really liked being creative and design fun animal characters, that players can actually play.
+    </div>
+    <div
+    v-for="element in animalsArray"
+    :key="element"
+    class="banana-container">
+        <div class="banana-gif-container">
+            <img
+            class="banana-gif" 
+            :src="element.gif">
+            <div class="banana-gif-text">
+                <h1>The {{element.name}}</h1>
             </div>
         </div>
-    </main>
+        <div class="banana-image-container">
+            <div class="banana-image-description">
+                <p>{{element.description}}</p>
+            </div>
+            <Slider
+            :imageArray="element.imgArray"
+            />
+        </div>
+    </div>
 </template>
 
 <script>
