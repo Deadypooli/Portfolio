@@ -1,0 +1,38 @@
+.display-container {
+	position: fixed;
+	inset: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+	backdrop-filter: blur(10px);
+}
+
+.display-backdrop {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	will-change: transform;
+	cursor: pointer;
+	transition: transform 0.5s ease;
+}
+
+.display-img {
+	margin: 0 10px;
+	flex-shrink: 0;
+	// opacity: 0.5;
+	transform: scale(0.9);
+	transition: all 0.3s ease;
+	cursor: pointer;
+	max-height: calc(100% - 100px);
+	max-width: calc(100% - 100px);
+	border-radius: 10px;
+	z-index: 20;
+}
+
+.carousel-item.center {
+	opacity: 1;
+	transform: scale(1.1);
+	cursor: default;
+	// user-select: none;
+}

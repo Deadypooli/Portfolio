@@ -18,7 +18,7 @@
 
 <script>
     import Header from '@/components/Header.vue';
-    import Display from '@/components/Display.vue';
+    import Display from '@/components/Display copy.vue';
 
     export default {
         components: { Header, Display },
