@@ -1,13 +1,19 @@
 <template>
-    <div class="display-backdrop"
+    <div class="display-container"
     v-on:click.self="toggleModal">
-            <img ref="beforeImg" :src="beforeImg" class="before-img" @click="setCurrentImg(beforeImg)">
+        <div class="display-backdrop"
+        :style="{ 'transform': 'translateX(' + translateValue + ')'}"
+        v-on:click.self="toggleModal"
+        ref="backdrop">
             <img 
-            ref="displayImg"
+            v-for="(img, index) in imgArray"
+            :key="index"
+            ref="displayImages"
             class="display-img"
-            :src="displayImg"
-            @click="toggleModal()">
-            <img ref="afterImg" :src="afterImg" class="after-img" @click="setCurrentImg(afterImg)">
+            :class="{center: index === currentIndex}"
+            :src="img"
+            @click="setCurrentImg(img)">
+        </div>
     </div>
 </template>
 
@@ -17,11 +23,16 @@ export default {
     data () {
         return {
             displayImg: null,
-            beforeImg: null,
-            afterImg: null,
+            currentIndex: 0,
+            imagesWidths: [],
+            offsetValue: [],
+            translateValue: 0,
         }
     },
     mounted () {
+        for (let imgIndex = 0; imgIndex < this.imgArray.length; imgIndex++) {            
+            this.imagesWidths.push(this.$refs['displayImages'][imgIndex].width);
+        }
         this.setCurrentImg(this.selectedImage);
     },
     methods: {
@@ -30,18 +41,14 @@ export default {
             document.body.classList.remove('noscroll');
         },
         setCurrentImg (currentImg) {
-            if (this.imgArray[this.imgArray.indexOf(currentImg)] > this.imgArray[this.imgArray.indexOf(this.displayImg)]) {
-                // this.$refs.displayImg.classList.add('left-transition');
-            } else if (this.imgArray[this.imgArray.indexOf(currentImg)] < this.imgArray[this.imgArray.indexOf(this.displayImg)]) {
-                // this.$refs.displayImg.classList.add('right-transition');
+            console.log(this.displayImg);
+            if (this.displayImg) {
+                this.$refs['backdrop'].style = 'transition: transform 0.5s ease;';
             }
-            // setTimeout(() => {
-                this.displayImg = currentImg;
-                this.beforeImg = this.imgArray[this.imgArray.indexOf(currentImg) - 1];
-                this.afterImg = this.imgArray[this.imgArray.indexOf(currentImg) + 1];
-                // this.$refs.displayImg.classList.remove('left-transition');
-                // this.$refs.displayImg.classList.remove('right-transition');
-            // }, 500);
+            this.displayImg = currentImg;
+            this.currentIndex = this.imgArray.indexOf(currentImg);
+            this.offsetValue = this.imagesWidths.slice(0, this.currentIndex).reduce((sum, w) => sum + w, 0);
+            this.translateValue = window.innerWidth / 2 - this.$refs['displayImages'][this.currentIndex].width / 2 - this.offsetValue + 'px';
         }
     }
 }
