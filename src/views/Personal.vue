@@ -38,7 +38,7 @@
                 r.keys().forEach(key => (this.imgArray.push(r(key))));
             },
             toggleModal (key) {
-                if (window.innerWidth > 786) {    
+                if (window.innerWidth > 768) {    
                     this.selectedImage = key;
                     this.clicked = !this.clicked;
                     document.body.classList.add('noscroll');

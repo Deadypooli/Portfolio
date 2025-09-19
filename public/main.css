@@ -173,14 +173,13 @@ h1, p {
   transition: all 0.3s ease;
   cursor: pointer;
   max-height: calc(100% - 100px);
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 250px);
   border-radius: 10px;
   z-index: 20;
 }
 
-.carousel-item.center {
-  opacity: 1;
-  transform: scale(1.1);
+.display-img.center {
+  transform: scale(1.05);
   cursor: default;
 }
 
@@ -258,6 +257,10 @@ h1, p {
 
   .logo-desktop {
     display: none;
+  }
+
+  .info {
+    margin-bottom: 50px;
   }
 }
 .hero-vid {
