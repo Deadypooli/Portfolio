@@ -1,28 +1,31 @@
-.banana-hero, .banana-container {
+.banana-hero {
+    	background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
+}
+
+.hero-container {
+    position: relative;
+    height: calc(100vh - 66px);
     max-width: 1400px;
     margin-inline: auto;
 }
 
 
-.banana-container {
-    position: relative;
-    z-index: 20;
-}
-
 .banana-hero {
     position: relative;
-    height: calc(100vh - 66px);
 }
 
 .banana-header {
-    position: relative;
+    position: fixed;
     width: 100%;
+    max-width: 1400px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    overflow: hidden;
 }
 
 .drama {
+    width: 100%;
     text-align: end;
     right: 0;
 }
@@ -44,6 +47,38 @@
     transform: scaleX(-1);
 }
 
+.banana-container {
+    position: relative;
+    z-index: 20;
+    background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
+}
+
+.banana-text {
+    align-self: center;
+    margin-top: 100px;
+}
+
+.banana-turn {
+    margin-inline: auto;
+    max-width: 1700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline: auto;
+}
+
+.banana-turn:last-child {
+    margin-bottom: 100px;
+}
+
+.banana-turn img {
+    margin-top: 100px;
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    padding-inline: 80px;
+}
 
 @media screen and (max-width: 768px) {
     .banana-container {

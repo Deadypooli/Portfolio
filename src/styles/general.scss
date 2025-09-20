@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	// color: #fff;
 }
 a, a:hover, a:focus, a:active {
 	text-decoration: none;
@@ -9,13 +10,17 @@ body {
 	font-family: 'Futura', Helvetica, Arial;
 	font-size: 20px;
 	margin: 0;
-	background: linear-gradient(135deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
+	background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
 	overflow: overlay;
 	color: #290331;
 }
 
 h1 {
 	font-size: 256px;
+}
+
+h2 {
+	font-size: 128px;
 }
 
 h1, p {
@@ -43,4 +48,14 @@ h1, p {
 
 .noscroll {
 	overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 128px;
+	}
+
+	h2 {
+		font-size: 64px;
+	}
 }

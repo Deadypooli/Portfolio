@@ -5,7 +5,9 @@
 	padding: 20px;
 	z-index: 20;
 	backdrop-filter: blur(10px);
-	background: linear-gradient(135deg,rgba(247, 199, 255, .6) 0%, rgba(199, 255, 254, .6) 100%);
+	// background: linear-gradient(135deg,rgb(234, 162, 247, .6) 0%, rgb(145, 247, 245, .6) 100%);
+	background-color: rgba(247, 199, 255, .6);
+	// background: linear-gradient(135deg,rgba(247, 199, 255, .3) 0%, rgba(199, 255, 254, .3) 100%);
 }
 
 .mobile-nav {
