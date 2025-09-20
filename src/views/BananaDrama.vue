@@ -1,37 +1,24 @@
 <template>
     <Header />
-    <div class="banana-headline">
-        <h1>
-            Banana
-            <br>
-            &emsp;
-             <!-- &ensp; -->
-              Drama
-        </h1>
+    <div class="banana-hero">
+        <div class="banana-header">
+            <h1 class="banana">
+                Banana
+            </h1>
+            <h1 class="drama">
+                Drama
+            </h1>
+        </div>
         <img
             class="banana-gif" 
-            :src="animalsArray[0].gif">
+            :src="animalsArray[0]">
+        <img
+            class="banana-peek" 
+            :src="animalsArray[1]">
         <!-- Banana Drama is a RTS game on steam and the first game I got to work on. It was a lot of fun for me. -->
         <!-- I really liked being creative and design fun animal characters, that players can actually play. -->
     </div>
-    <div
-    class="banana-container">
-        <!-- <div class="banana-gif-container">
-            <img
-            class="banana-gif" 
-            :src="element.gif">
-            <div class="banana-gif-text">
-                <h2>The {{element.name}}</h2>
-            </div>
-        </div>
-        <div class="banana-image-container">
-            <div class="banana-image-description">
-                <p>{{element.description}}</p>
-            </div>
-            <Slider
-            :imageArray="element.imgArray"
-            />
-        </div> -->
+    <div class="banana-container">
     </div>
 </template>
 
@@ -44,53 +31,8 @@
         data() {
             return {
                 animalsArray: [
-                    {
-                        name: 'Cow',
-                        description: 'Cow (moo)! The cow is very self-confident and often likes to show off its beautiful udder!',
-                        gif: require('@/img/projects/cow.gif'),
-                        imgArray: [
-                            require('@/img/projects/cow-wireframe.jpg'),
-                            require('@/img/projects/cow-render.jpg')
-                        ],
-                        wireframe: require('@/img/projects/cow-wireframe.jpg'),
-                        render: require('@/img/projects/cow-render.jpg'),
-                    },
-                    {
-                        name: 'Tiger',
-                        description: 'Wow a tiger! He is particularly proud of his beautiful coat and regularly impresses many female tigers with it.',
-                        gif: require('@/img/projects/tiger.gif'),
-                        imgArray: [
-                            require('@/img/projects/tiger-wireframe.jpg'),
-                            require('@/img/projects/tiger-render.jpg')
-                        ],
-                    },
-                    {
-                        name: 'Lion',
-                        description: 'Roaarrrr - the lion! A lion throwing bananas is a little unusual at first glance, but he has learnt this effective fighting technique from the monke(y)s!',
-                        gif: require('@/img/projects/lion.gif'),
-                        imgArray: [
-                            require('@/img/projects/lion-wireframe.jpg'),
-                            require('@/img/projects/lion-render.jpg')
-                        ],
-                    },
-                    {
-                        name: 'Cockatoo',
-                        description: 'Fly cockatoo! Similar to his best friend "Kiki the cockatoo" his abilities are often underestimated due to his cute looks!',
-                        gif: require('@/img/projects/cockatoo.gif'),
-                        imgArray: [
-                            require('@/img/projects/cockatoo-wireframe.jpg'),
-                            require('@/img/projects/cockatoo-render.jpg')
-                        ],
-                    },
-                    {
-                        name: 'Giraffe',
-                        description: 'Helicopter giraffe! Sometimes she gets so excited that she can\'t stop spinning her head like a helicopter. Let\'s hope she doesn\'t fly away!',
-                        gif: require('@/img/projects/giraffe.gif'),
-                        imgArray: [
-                            require('@/img/projects/giraffe-wireframe.jpg'),
-                            require('@/img/projects/giraffe-render.jpg')
-                        ],
-                    }
+                    require('@/img/projects/cow.gif'),
+                    require('@/img/projects/tiger-peek.png'),
                 ]
             };
         },

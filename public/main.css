@@ -47,63 +47,49 @@ h1, p {
   overflow: hidden;
 }
 
-.banana-headline, .banana-container {
+.banana-hero, .banana-container {
   max-width: 1400px;
   margin-inline: auto;
-  margin-bottom: 50px;
 }
 
-.banana-headline {
+.banana-container {
   position: relative;
+  z-index: 20;
 }
 
-.banana-headline h1 {
-  position: fixed;
+.banana-hero {
+  position: relative;
+  height: calc(100vh - 66px);
+}
+
+.banana-header {
+  position: relative;
+  width: 100%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
 
-.banana-headline img {
-  position: absolute;
-  top: 0;
+.drama {
+  text-align: end;
   right: 0;
-  z-index: 0;
-}
-
-.banana-container {
-  height: 100vh;
-}
-
-.banana-gif-container {
-  display: flex;
-  margin-bottom: 50px;
 }
 
 .banana-gif {
-  width: 50%;
-  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.banana-peek {
+  max-width: 500px;
+  position: absolute;
+  bottom: 0;
+}
+
+.banana-gif {
+  width: 40%;
   transform: scaleX(-1);
-}
-
-.banana-gif-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.banana-image-container {
-  display: flex;
-}
-
-.banana-image-description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  margin-right: 50px;
-  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -111,30 +97,14 @@ h1, p {
     margin-bottom: 100px;
   }
 
-  .banana-headline {
+  .banana-hero {
     margin-inline: 20px;
-  }
-
-  .banana-gif-container, .banana-image-container {
-    flex-direction: column;
-  }
-
-  .banana-gif-container {
-    margin-bottom: 0;
   }
 
   .banana-gif {
     width: 100%;
     border-radius: 0;
     margin-bottom: 20px;
-  }
-
-  .banana-image-description {
-    justify-content: center;
-    width: 100%;
-    padding-inline: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
   }
 }
 .personal-container {
@@ -215,7 +185,7 @@ h1, p {
   top: 0;
   width: 100%;
   padding: 20px;
-  z-index: 10;
+  z-index: 20;
   backdrop-filter: blur(10px);
   background: linear-gradient(135deg, rgba(247, 199, 255, 0.6) 0%, rgba(199, 255, 254, 0.6) 100%);
 }
