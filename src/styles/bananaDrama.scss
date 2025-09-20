@@ -4,6 +4,29 @@
     margin-bottom: 50px;
 }
 
+.banana-headline {
+    position: relative;
+}
+
+.banana-headline h1 {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.banana-headline img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+.banana-container {
+    height: 100vh;
+}
+
 .banana-gif-container {
     display: flex;
     margin-bottom: 50px;
