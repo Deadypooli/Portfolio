@@ -3,7 +3,7 @@
 	top: 0;
 	width: 100%;
 	padding: 20px;
-	z-index: 20;
+	z-index: 100;
 	backdrop-filter: blur(10px);
 	// background: linear-gradient(135deg,rgb(234, 162, 247, .6) 0%, rgb(145, 247, 245, .6) 100%);
 	background-color: rgba(247, 199, 255, .6);
@@ -65,7 +65,7 @@
 	.hidden-nav {
 		display: flex;
 		backdrop-filter: blur(10px);
-		background: linear-gradient(135deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
+		background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
 	}
 
 	.pages {

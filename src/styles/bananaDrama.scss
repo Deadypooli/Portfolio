@@ -1,5 +1,6 @@
 .banana-hero {
-    	background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
+    background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
+    position: relative;
 }
 
 .hero-container {
@@ -7,11 +8,6 @@
     height: calc(100vh - 66px);
     max-width: 1400px;
     margin-inline: auto;
-}
-
-
-.banana-hero {
-    position: relative;
 }
 
 .banana-header {
@@ -85,13 +81,21 @@
         margin-bottom: 100px;
     }
 
-    .banana-hero {
-        margin-inline: 20px;
+    .banana-header {
+        padding-inline: 10px;
+    }
+
+    .banana-peek {
+        max-width: 300px;
     }
 
     .banana-gif {
-        width: 100%;
+        width: 50%;
         border-radius: 0;
         margin-bottom: 20px;
+    }
+
+    .banana-turn img{
+        padding-inline: 10px;
     }
 }
