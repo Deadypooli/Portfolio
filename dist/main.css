@@ -11,8 +11,17 @@ body {
   font-family: "Futura", Helvetica, Arial;
   font-size: 20px;
   margin: 0;
-  background: linear-gradient(135deg, #f7c7ff 0%, #c7fffe 100%);
+  background: linear-gradient(180deg, #f7c7ff 0%, #c7f7ff 100%);
   overflow: overlay;
+  color: #290331;
+}
+
+h1 {
+  font-size: 256px;
+}
+
+h2 {
+  font-size: 128px;
 }
 
 h1, p {
@@ -42,41 +51,94 @@ h1, p {
   overflow: hidden;
 }
 
-.banana-headline, .banana-container {
-  max-width: 1400px;
-  margin-inline: auto;
-  margin-bottom: 50px;
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 128px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+}
+.banana-hero {
+  background: linear-gradient(180deg, #f7c7ff 0%, #c7f7ff 100%);
 }
 
-.banana-gif-container {
-  display: flex;
-  margin-bottom: 50px;
+.hero-container {
+  position: relative;
+  height: calc(100vh - 66px);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.banana-hero {
+  position: relative;
+}
+
+.banana-header {
+  position: fixed;
+  width: 100%;
+  max-width: 1400px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.drama {
+  width: 100%;
+  text-align: end;
+  right: 0;
 }
 
 .banana-gif {
-  width: 50%;
-  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.banana-peek {
+  max-width: 500px;
+  position: absolute;
+  bottom: 0;
+}
+
+.banana-gif {
+  width: 40%;
   transform: scaleX(-1);
 }
 
-.banana-gif-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.banana-container {
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(180deg, #f7c7ff 0%, #c7f7ff 100%);
+}
+
+.banana-text {
+  align-self: center;
+  margin-top: 100px;
+}
+
+.banana-turn {
+  margin-inline: auto;
+  max-width: 1700px;
   width: 100%;
-}
-
-.banana-image-container {
   display: flex;
-}
-
-.banana-image-description {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 50%;
-  margin-right: 50px;
-  text-align: center;
+  flex-direction: column;
+  margin-inline: auto;
+}
+
+.banana-turn:last-child {
+  margin-bottom: 100px;
+}
+
+.banana-turn img {
+  margin-top: 100px;
+  max-width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+  padding-inline: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -84,30 +146,14 @@ h1, p {
     margin-bottom: 100px;
   }
 
-  .banana-headline {
+  .banana-hero {
     margin-inline: 20px;
-  }
-
-  .banana-gif-container, .banana-image-container {
-    flex-direction: column;
-  }
-
-  .banana-gif-container {
-    margin-bottom: 0;
   }
 
   .banana-gif {
     width: 100%;
     border-radius: 0;
     margin-bottom: 20px;
-  }
-
-  .banana-image-description {
-    justify-content: center;
-    width: 100%;
-    padding-inline: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
   }
 }
 .personal-container {
@@ -188,9 +234,9 @@ h1, p {
   top: 0;
   width: 100%;
   padding: 20px;
-  z-index: 10;
+  z-index: 20;
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, rgba(247, 199, 255, 0.6) 0%, rgba(199, 255, 254, 0.6) 100%);
+  background-color: rgba(247, 199, 255, 0.6);
 }
 
 .mobile-nav {
