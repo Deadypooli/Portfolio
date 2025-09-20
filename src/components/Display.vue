@@ -20,6 +20,7 @@
 <script>
 export default {
     props: ['selectedImage', 'imgArray'],
+    name: 'Display',
     data () {
         return {
             displayImg: null,
