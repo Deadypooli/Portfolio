@@ -23,24 +23,20 @@
 .drama {
     width: 100%;
     text-align: end;
-    right: 0;
 }
 
 .banana-gif {
     position: absolute;
     top: 0;
     right: 0;
+    transform: scaleX(-1);
+    width: 40%;
 }
 
 .banana-peek {
     max-width: 500px;
     position: absolute;
     bottom: 0;
-}
-
-.banana-gif {
-    width: 40%;
-    transform: scaleX(-1);
 }
 
 .banana-container {
@@ -76,7 +72,7 @@
     padding-inline: 80px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .banana-container {
         margin-bottom: 100px;
     }
@@ -84,7 +80,7 @@
     .banana-header {
         padding-inline: 10px;
     }
-
+    
     .banana-peek {
         max-width: 300px;
     }
@@ -94,8 +90,37 @@
         border-radius: 0;
         margin-bottom: 20px;
     }
-
+    
     .banana-turn img{
         padding-inline: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    .banana-header {
+        padding-inline: 0;
+        top: 45%;
+        text-align: center;
+    }
+    
+    
+    .banana, .drama {
+        text-align: center;
+    }
+
+    .banana-peek {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .banana {
+        margin-bottom: 250px;
+    }
+
+    .banana-gif {
+        left: 0;
+        right: auto;
+        width: 100%;
+        margin-top: 100px;
     }
 }
