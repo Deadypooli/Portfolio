@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/Personal.vue')
   },
   {
     path: '/bananaDrama',
@@ -12,9 +12,9 @@ const routes = [
     component: () => import('../views/BananaDrama.vue')
   },
   {
-    path: '/personal',
-    name: 'Personal',
-    component: () => import('../views/Personal.vue')
+    path: '/untitled',
+    name: 'Untitled',
+    component: () => import('../views/Untitled.vue')
   },
   {
     path: '/neofyInfo',

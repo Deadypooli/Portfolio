@@ -2,7 +2,7 @@
 	<header class="header">
 		<a href="/" class="mobile-nav">
 			<!-- <img src="../logo/logo.svg" class="header-svg"> -->
-			N
+			Neofy
 		</a>
 		<div
 		class="mobile-nav"
@@ -16,17 +16,22 @@
 				<div class="logo-desktop">
 					<a href="/">
 						<!-- <img src="../logo/logo.svg" class="header-svg"> -->
-						N
+						Neofy
 					</a>
 				</div>
-				<div class="page-link">
+				<!-- <div class="page-link">
 					<a href="/personal">
 						Personal Art
 					</a>
-				</div>
+				</div> -->
 				<div class="page-link">
 					<a href="/bananaDrama">
 						Banana Drama
+					</a>
+				</div>
+				<div class="page-link">
+					<a href="/untitled">
+						Untitled Project
 					</a>
 				</div>
 				<!-- <div class="page-link">
