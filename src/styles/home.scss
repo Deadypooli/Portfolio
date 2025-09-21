@@ -1,8 +1,25 @@
-.hero-vid {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+.justified-gallery {
+  width: 100%;
+}
+
+.image-row {
+  display: flex;
+}
+
+.gallery-image {
+  display: block;
+  object-fit: cover;
+}
+
+.text-block {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #111;
+  background: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
 }
