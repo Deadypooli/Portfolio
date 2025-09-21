@@ -346,7 +346,7 @@ h1, p {
     margin-bottom: 50px;
   }
 }
-.justified-gallery {
+.gallery-container {
   width: 100%;
 }
 
@@ -360,16 +360,10 @@ h1, p {
 }
 
 .text-block {
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  color: #111;
-  background: #f0f0f0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
 }
 
 .video-container {

@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="justified-gallery" ref="galleryContainer">
+  <div class="gallery-container" ref="galleryContainer">
     <div
       v-for="(row, rowIndex) in rows"
       :key="rowIndex"
@@ -22,7 +22,7 @@
           :style="{ width: item.displayWidth + 'px',
                     height: row.rowHeight + 'px',
                     fontSize: row.rowHeight * 0.6 + 'px',}">
-          {{ item.content }}
+          NEOFY
         </div>
       </template>
     </div>
@@ -42,11 +42,19 @@ export default {
       imgArray:[],
       rows: [],
       TARGET_ROW_HEIGHT: 300,
+      totalAspect: 0,
+      scaledItems: null,
+      containerWidth: 0,
+      currentRow: [],
+      currentWidth: 0,
+      rowCount: 0,
+      allItems: [],
     };
   },
   mounted() {
     this.importAll(require.context('@/img/personal/', true));
     this.buildRows();
+    window.addEventListener('resize', this.buildRows);
   },
   methods: {
     importAll(r) {
@@ -54,76 +62,80 @@ export default {
     },
     loadImageData(src) {
       return new Promise((resolve) => {
-        const img = new Image()
-        img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight })
+        var img = new Image();
+        img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
         img.src = src;
       })
     },
 
     generateRow(items, containerWidth) {
-      const totalAspect = items.reduce((sum, item) => sum + item.aspectRatio, 0)
-      const rowHeight = containerWidth / totalAspect
-      const scaledItems = items.map((item) => ({
+      this.totalAspect = items.reduce((sum, item) => sum + item.aspectRatio, 0);
+      var rowHeight = containerWidth / this.totalAspect;
+      this.scaledItems = items.map((item) => ({
         ...item,
         displayWidth: rowHeight * item.aspectRatio,
       }))
-      return { items: scaledItems, rowHeight }
+      return { items: this.scaledItems, rowHeight };
     },
+
     async buildRows() {
+      this.containerWidth = this.$refs['galleryContainer'].offsetWidth;
+      this.rows = [];
+      this.currentRow = [];
+      this.currentWidth = 0;
+      this.rowCount = 0;
       
-      const containerWidth = window.innerWidth;
-      
-      // Load image metadata only once
       const metadata = await Promise.all(this.imgArray.map((img) => this.loadImageData(img)));
       
-      const allItems = metadata.map((meta, i) => ({
+      this.allItems = metadata.map((meta, i) => ({
         type: 'image',
         src: this.imgArray[i],
         width: meta.width,
         height: meta.height,
         aspectRatio: meta.width / meta.height,
-      }))
+      }));
       
-      this.rows = []
-      let currentRow = []
-      let currentWidth = 0
-      let i = 0
-      let rowCount = 0
+      
+      let i = 0;
     
-      while (i < allItems.length) {
-        // Inject second row with "Neofy" and images
-        if (rowCount === 1 && i + 3 <= allItems.length) {
+      while (i < this.allItems.length) {
+        if (this.rowCount === 1 && i + 3 <= this.allItems.length) {
           
-          const rowItems = [
-            allItems[i++],
+          var rowItems = [
+            this.allItems[i++],
             {
               type: 'text',
-              content: 'Neofy',
-              aspectRatio: 4,
+              aspectRatio: 2.5,
             },
-            allItems[i++],
-            allItems[i++],
-          ]
-          this.rows.push(this.generateRow(rowItems, containerWidth))
-          rowCount++
+            this.allItems[i++],
+            this.allItems[i++],
+          ];
+          if (this.containerWidth < 1024) {
+            rowItems = rowItems.slice(1, 2);
+          }
+          console.log(rowItems);
+          
+          this.rows.push(this.generateRow(rowItems, this.containerWidth));
+          this.rowCount++;
+          continue;
         }
       
-        const item = allItems[i++]
-        currentRow.push(item)
-        currentWidth += this.TARGET_ROW_HEIGHT * item.aspectRatio
+        const item = this.allItems[i++]
+        this.currentRow.push(item)
+        this.currentWidth += this.TARGET_ROW_HEIGHT * item.aspectRatio;
       
-        if (currentWidth >= containerWidth) {
-          this.rows.push(this.generateRow(currentRow, containerWidth))
-          currentRow = []
-          currentWidth = 0
-          rowCount++
+        if (this.currentWidth >= this.containerWidth) {
+          this.rows.push(this.generateRow(this.currentRow, this.containerWidth));
+          this.currentRow = [];
+          this.currentWidth = 0;
+          this.rowCount++;
         }
       }
     
-      if (currentRow.length) {
-        this.rows.push(this.generateRow(currentRow, containerWidth))
+      if (this.currentRow.length) {
+        this.rows.push(this.generateRow(this.currentRow, this.containerWidth));
       }
     }
-  }
+  },
 };
 </script>
