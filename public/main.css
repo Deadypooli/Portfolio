@@ -376,6 +376,20 @@ h1, p {
   animation: sliding linear 46s infinite;
 }
 
+@keyframes sliding {
+  0% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .hero-vid {
   position: relative;
   height: calc(100% + 66px);
