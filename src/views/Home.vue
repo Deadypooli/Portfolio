@@ -1,5 +1,10 @@
 <template>
   <Header />
+  <Display
+	:selectedImage="selectedImage"
+    :imgArray="imgArray"
+	v-if="clicked"
+	@clicked="toggleModal(key)"/>
   <div class="gallery-container" ref="galleryContainer">
     <div
       v-for="(row, rowIndex) in rows"
@@ -15,6 +20,7 @@
             height: row.rowHeight + 'px',
           }"
           class="gallery-image"
+          @click="toggleModal(item.src)"
         />
         <div
           v-else-if="item.type === 'text'"
@@ -31,14 +37,15 @@
 
 <script>
 import Header from '@/components/Header.vue';
+import Display from '@/components/Display.vue';
 
 export default {
   name: 'Home',
-  components: {
-    Header,
-  },
+  components: { Header, Display },
   data() {
     return {
+      selectedImage: null,
+      clicked: false,
       imgArray:[],
       rows: [],
       TARGET_ROW_HEIGHT: 300,
@@ -59,6 +66,15 @@ export default {
   methods: {
     importAll(r) {
       r.keys().forEach(key => (this.imgArray.push(r(key))));
+    },
+    toggleModal (key) {
+      console.log(key);
+      
+        if (window.innerWidth > 768) {    
+            this.selectedImage = key;
+            this.clicked = !this.clicked;
+            document.body.classList.add('noscroll');
+        }
     },
     loadImageData(src) {
       return new Promise((resolve) => {

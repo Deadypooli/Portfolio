@@ -42,6 +42,7 @@ export default {
             document.body.classList.remove('noscroll');
         },
         setCurrentImg (currentImg) {
+            
             if (this.displayImg) {
                 this.$refs['backdrop'].style = 'transition: transform 0.5s ease;';
             }
