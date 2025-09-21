@@ -73,6 +73,14 @@
     border-radius: 10px;
 }
 
+.pink-background {
+    background: linear-gradient(180deg,
+        rgba(247, 199, 255, 1) 0%,
+        rgba(247, 199, 255, 1) 60%,
+        rgba(199, 247, 255, 1) 90%,
+        rgba(199, 247, 255, 1) 100%);
+}
+
 @media (max-width: 1024px) {
     .untitled-content {
         padding-inline: 20px;

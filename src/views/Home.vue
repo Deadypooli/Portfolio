@@ -68,8 +68,6 @@ export default {
       r.keys().forEach(key => (this.imgArray.push(r(key))));
     },
     toggleModal (key) {
-      console.log(key);
-      
         if (window.innerWidth > 768) {    
             this.selectedImage = key;
             this.clicked = !this.clicked;

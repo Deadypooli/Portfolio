@@ -36,6 +36,12 @@ export default {
       vid: require('@/img/untitled/0000-1410.mp4'),
       img: require('@/img/untitled/car-image.png'),
     };
+  },
+  mounted() {
+    document.body.classList.add('pink-background');
+  },
+  beforeUnmount() {
+    document.body.classList.remove('pink-background');
   }
 };
 </script>
