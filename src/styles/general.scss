@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box;
-	color: #fff;
 }
 a, a:hover, a:focus, a:active {
 	text-decoration: none;
@@ -12,7 +11,7 @@ body {
 	margin: 0;
 	background-color: #bbcfff;
 	overflow: overlay;
-	// color: #3a3a4c;
+	color: #fff;
 }
 
 h1 {
@@ -59,5 +58,11 @@ h1, p {
 
 	h2 {
 		font-size: 50px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h1 {
+		font-size: 75px;
 	}
 }

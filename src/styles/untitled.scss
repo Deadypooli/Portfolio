@@ -45,7 +45,7 @@
 
 
 .untitled-container {
-    max-width: 1700px;
+    max-width: 1440px;
     margin-inline: auto;
     padding-inline: 100px;
     margin-top: 50px;
@@ -89,10 +89,7 @@
     }
 }
 
-@media (max-width: 475px) {
-    .soon h1 {
-        font-size: 80px;
-    }
+@media (max-width: 480px) {
     .untitled-container img {
         margin-block: 50px;
     }

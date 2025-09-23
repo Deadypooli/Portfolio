@@ -3,7 +3,7 @@
 }
 
 .hero-container {
-    max-width: 1400px;
+    max-width: 1440px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 .banana-header {
     position: absolute;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     top: 20%;
     z-index: 10;
 }
@@ -43,7 +43,7 @@
 
 .banana-description {
     padding-block: 50px;
-    max-width: 1700px;
+    width: 100%;
     margin-inline: auto;
     text-align: center;
     background-color: #c8b6ff;
@@ -53,11 +53,12 @@
 .banana-text {
     align-self: center;
     margin-top: 100px;
+    padding-inline: 10px;
 }
 
 .banana-turn {
     margin-inline: auto;
-    max-width: 1700px;
+    max-width: 1440px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -97,16 +98,22 @@
         margin-bottom: 20px;
     }
     
+    .banana-text {
+        margin-top: 50px;
+    }
+
     .banana-turn img{
+        margin-top: 50px;
         padding-inline: 10px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .banana-header {
         padding-inline: 0;
         text-align: center;
         margin-top: 100px;
+        top: 10%;
     }
     
     

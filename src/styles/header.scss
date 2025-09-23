@@ -55,6 +55,7 @@
 		top: 0;
 		height: 100vh;
 		padding-left: 10px;
+		background-color: #c8b6ff;
 	}
 	
 	.page-link {
@@ -67,8 +68,6 @@
 
 	.hidden-nav {
 		display: flex;
-		backdrop-filter: blur(10px);
-		background-color: #c8b6ff;
 	}
 
 	.pages {
@@ -79,10 +78,7 @@
 	.logo-desktop {
 		display: none;
 	}
-	_::-webkit-full-page-media, _:future, :root .safari_only {
-        color: red;
-    }
 	.info {
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 	}
 }

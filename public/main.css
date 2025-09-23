@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  color: #fff;
 }
 
 a, a:hover, a:focus, a:active {
@@ -14,6 +13,7 @@ body {
   margin: 0;
   background-color: #bbcfff;
   overflow: overlay;
+  color: #fff;
 }
 
 h1 {
@@ -62,12 +62,17 @@ h1, p {
     font-size: 50px;
   }
 }
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 75px;
+  }
+}
 .banana-hero {
   position: relative;
 }
 
 .hero-container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -76,7 +81,7 @@ h1, p {
 .banana-header {
   position: absolute;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1440px;
   top: 20%;
   z-index: 10;
 }
@@ -106,7 +111,7 @@ h1, p {
 
 .banana-description {
   padding-block: 50px;
-  max-width: 1700px;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
   background-color: #c8b6ff;
@@ -116,11 +121,12 @@ h1, p {
 .banana-text {
   align-self: center;
   margin-top: 100px;
+  padding-inline: 10px;
 }
 
 .banana-turn {
   margin-inline: auto;
-  max-width: 1700px;
+  max-width: 1440px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -160,15 +166,21 @@ h1, p {
     margin-bottom: 20px;
   }
 
+  .banana-text {
+    margin-top: 50px;
+  }
+
   .banana-turn img {
+    margin-top: 50px;
     padding-inline: 10px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .banana-header {
     padding-inline: 0;
     text-align: center;
     margin-top: 100px;
+    top: 10%;
   }
 
   .banana, .drama {
@@ -280,6 +292,7 @@ h1, p {
     top: 0;
     height: 100vh;
     padding-left: 10px;
+    background-color: #c8b6ff;
   }
 
   .page-link {
@@ -292,8 +305,6 @@ h1, p {
 
   .hidden-nav {
     display: flex;
-    backdrop-filter: blur(10px);
-    background-color: #c8b6ff;
   }
 
   .pages {
@@ -305,12 +316,8 @@ h1, p {
     display: none;
   }
 
-  _::-webkit-full-page-media, _:future, :root .safari_only {
-    color: red;
-  }
-
   .info {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
 .gallery-container {
@@ -390,7 +397,7 @@ h1, p {
 }
 
 .untitled-container {
-  max-width: 1700px;
+  max-width: 1440px;
   margin-inline: auto;
   padding-inline: 100px;
   margin-top: 50px;
@@ -434,11 +441,7 @@ h1, p {
     transform: skewY(0deg);
   }
 }
-@media (max-width: 475px) {
-  .soon h1 {
-    font-size: 80px;
-  }
-
+@media (max-width: 480px) {
   .untitled-container img {
     margin-block: 50px;
   }
@@ -450,7 +453,6 @@ h1, p {
 .info-text {
   max-width: 700px;
   margin-inline: auto;
-  min-height: calc(100vh - 66px);
   text-align: center;
   margin-bottom: 50px;
 }
