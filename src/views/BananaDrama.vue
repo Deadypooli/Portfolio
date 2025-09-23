@@ -1,21 +1,20 @@
 <template>
     <Header />
-    <div class="banana-hero">
-        <div class="hero-container">
-
-            <div class="banana-header">
-                <h1 class="banana">
+    <div class="banana-hero-container">
+        <div class="banana-hero">
+            <div class="banana-hero-header">
+                <h1>
                     Banana
                 </h1>
-                <h1 class="drama">
+                <h1>
                     Drama
                 </h1>
             </div>
             <img
-            class="banana-gif" 
+            class="banana-hero-cow" 
             :src="cowDance">
             <img
-            class="banana-peek" 
+            class="banana-hero-tiger" 
             :src="tigerPeek">
         </div>
     </div>
@@ -30,7 +29,7 @@
         v-for="(animal, index) in animalsArray"
         :key="animal"
         class="banana-turn">
-            <div class="banana-text">
+            <div class="banana-turn-header">
                 <h2>
                     {{ namesArray[index] }}
                 </h2>

@@ -5,7 +5,7 @@
     :imgArray="imgArray"
 	v-if="clicked"
 	@clicked="toggleModal(key)"/>
-  <div class="gallery-container" ref="galleryContainer">
+  <div ref="galleryContainer">
     <div
       v-for="(row, rowIndex) in rows"
       :key="rowIndex"
@@ -49,12 +49,7 @@ export default {
       imgArray:[],
       rows: [],
       TARGET_ROW_HEIGHT: 300,
-      totalAspect: 0,
-      scaledItems: null,
       containerWidth: 0,
-      currentRow: [],
-      currentWidth: 0,
-      rowCount: 0,
       allItems: [],
     };
   },
@@ -76,28 +71,31 @@ export default {
     },
     loadImageData(src) {
       return new Promise((resolve) => {
-        var img = new Image();
+        let img = new Image();
         img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
         img.src = src;
       })
     },
 
     generateRow(items, containerWidth) {
-      this.totalAspect = items.reduce((sum, item) => sum + item.aspectRatio, 0);
-      var rowHeight = containerWidth / this.totalAspect;
-      this.scaledItems = items.map((item) => ({
+      let totalAspect = items.reduce((sum, item) => sum + item.aspectRatio, 0);
+      let rowHeight = containerWidth / totalAspect;
+      let scaledItems = items.map((item) => ({
         ...item,
         displayWidth: rowHeight * item.aspectRatio,
       }))
-      return { items: this.scaledItems, rowHeight };
+      return { items: scaledItems, rowHeight };
     },
 
     async buildRows() {
-      this.containerWidth = this.$refs['galleryContainer'].offsetWidth;
+      if (this.$refs['galleryContainer']) {
+        this.containerWidth = this.$refs['galleryContainer'].offsetWidth;
+      }
       this.rows = [];
-      this.currentRow = [];
-      this.currentWidth = 0;
-      this.rowCount = 0;
+      
+      let currentRow = [];
+      let currentWidth = 0;
+      let rowCount = 0;
       
       const metadata = await Promise.all(this.imgArray.map((img) => this.loadImageData(img)));
       
@@ -113,7 +111,7 @@ export default {
       let i = 0;
     
       while (i < this.allItems.length) {
-        if (this.rowCount === 1 && i + 3 <= this.allItems.length) {
+        if (rowCount === 1 && i + 3 <= this.allItems.length) {
           
           var rowItems = [
             this.allItems[i++],
@@ -129,26 +127,29 @@ export default {
           }
           
           this.rows.push(this.generateRow(rowItems, this.containerWidth));
-          this.rowCount++;
+          rowCount++;
           continue;
         }
       
         const item = this.allItems[i++]
-        this.currentRow.push(item)
-        this.currentWidth += this.TARGET_ROW_HEIGHT * item.aspectRatio;
+        currentRow.push(item)
+        currentWidth += this.TARGET_ROW_HEIGHT * item.aspectRatio;
       
-        if (this.currentWidth >= this.containerWidth) {
-          this.rows.push(this.generateRow(this.currentRow, this.containerWidth));
-          this.currentRow = [];
-          this.currentWidth = 0;
-          this.rowCount++;
+        if (currentWidth >= this.containerWidth) {
+          this.rows.push(this.generateRow(currentRow, this.containerWidth));
+          currentRow = [];
+          currentWidth = 0;
+          rowCount++;
         }
       }
     
-      if (this.currentRow.length) {
-        this.rows.push(this.generateRow(this.currentRow, this.containerWidth));
+      if (currentRow.length) {
+        this.rows.push(this.generateRow(currentRow, this.containerWidth));
       }
     }
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.buildRows);
   },
 };
 </script>

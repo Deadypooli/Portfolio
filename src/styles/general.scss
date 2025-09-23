@@ -34,21 +34,31 @@ h1, p {
 }
  
 ::-webkit-scrollbar-track {
-	background: aliceblue;
+	background: #bbcfff;
 }
   
 ::-webkit-scrollbar-thumb {
-	background-color: #dce5ee;
+	background-color: #fff;
 	border-radius: 100px;
-	border: 3.5px solid #f0f8ff;
+	border: 3.5px solid #bbcfff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #dce5ee;
+	background: #fff;
 }
 
 .noscroll {
 	overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 150px;
+	}
+
+	h2 {
+		font-size: 75px;
+	}
 }
 
 @media screen and (max-width: 768px) {

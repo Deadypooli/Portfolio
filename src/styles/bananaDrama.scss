@@ -1,15 +1,15 @@
-.banana-hero {
+.banana-hero-container {
     position: relative;
 }
 
-.hero-container {
+.banana-hero {
     max-width: 1440px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
 }
 
-.banana-header {
+.banana-hero-header {
     position: absolute;
     width: 100%;
     max-width: 1440px;
@@ -17,57 +17,54 @@
     z-index: 10;
 }
 
-
-.drama {
-    width: 100%;
+.banana-hero-header h1:last-child {
     text-align: end;
     margin-top: 100px;
 }
 
-.banana-gif {
+.banana-hero-cow {
     transform: scaleX(-1);
     width: 35%;
     margin-bottom: 100px;
     align-self: flex-end;
 }
 
-.banana-peek {
+.banana-hero-tiger {
     max-width: 500px;
     margin-left: 20px;
 }
 
+
 .banana-container {
     position: relative;
-    z-index: 20;
 }
 
 .banana-description {
-    padding-block: 50px;
     width: 100%;
-    margin-inline: auto;
     text-align: center;
     background-color: #c8b6ff;
+    padding-block: 50px;
     padding-inline: 20px;
-}
-
-.banana-text {
-    align-self: center;
-    margin-top: 100px;
-    padding-inline: 10px;
 }
 
 .banana-turn {
     margin-inline: auto;
-    max-width: 1440px;
     width: 100%;
+    max-width: 1440px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     margin-inline: auto;
 }
 
 .banana-turn:last-child {
     margin-bottom: 100px;
+}
+
+.banana-turn-header {
+    align-self: center;
+    margin-top: 100px;
+    padding-inline: 10px;
 }
 
 .banana-turn img {
@@ -78,62 +75,60 @@
     padding-inline: 80px;
 }
 
+
 @media (max-width: 768px) {
+    .banana-hero-header {
+        padding-inline: 15px;
+    }
+    
+    .banana-hero-tiger {
+        max-width: 300px;
+        margin-inline: 15px;
+    }
+
+    .banana-hero-cow {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+
     .banana-container {
         margin-bottom: 100px;
     }
-
-    .banana-header {
-        padding-inline: 10px;
-    }
-    
-    .banana-peek {
-        max-width: 300px;
-        margin-inline: 10px;
-    }
-
-    .banana-gif {
-        width: 50%;
-        border-radius: 0;
-        margin-bottom: 20px;
-    }
-    
-    .banana-text {
+        
+    .banana-turn-header {
         margin-top: 50px;
     }
 
     .banana-turn img{
         margin-top: 50px;
-        padding-inline: 10px;
+        padding-inline: 15px;
     }
 }
 
+
 @media (max-width: 480px) {
-    .banana-header {
+    .banana-hero-header {
         padding-inline: 0;
         text-align: center;
         margin-top: 100px;
         top: 10%;
     }
     
+    .banana-hero-header h1:first-child {
+        margin-bottom: 0;
+        text-align: center;
+    }
     
-    .banana, .drama {
+    .banana-hero-header h1:last-child {
         text-align: center;
     }
 
-    .banana-peek {
-        align-self: center;
-    }
-
-    .banana {
-        margin-bottom: 0;
-    }
-
-    .banana-gif {
+    .banana-hero-cow {
         width: 100%;
     }
 
-    .banana-text {
-        text-align: center;
+    .banana-hero-tiger {
+        align-self: center;
     }
 }
