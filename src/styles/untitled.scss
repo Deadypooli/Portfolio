@@ -1,13 +1,13 @@
 .video-container {
     position: relative;
-    max-height: 100vh;
+    max-height: calc(100vh - 66px);
     overflow: hidden;
 }
 
 .soon {
     position: absolute;
     z-index: 10;
-    color: aliceblue;
+    color: #fff;
     width: 100%;
     height: 100%;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .soon h1 {
-    animation: sliding linear 46s infinite;
+    animation: sliding linear 47s infinite;
 }
 
 @keyframes sliding {
@@ -43,56 +43,39 @@
     z-index: -1;
 }
 
-.untitled-container {
-    overflow: hidden;
-    margin-top: -100px;
-}
 
-.untitled-content {
+.untitled-container {
+    max-width: 1700px;
+    margin-inline: auto;
     padding-inline: 100px;
-    transform: skewY(-3deg);
     margin-top: 50px;
-    background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.untitled-text {
-    transform: skewY(3deg);
-}
-
-.untitled-content img {
+.untitled-container img {
     align-self: flex-end;
     flex-shrink: 0;
     margin-block: 100px;
     width: 100%;
     max-width: 700px;
     max-height: fit-content;
-    transform: skewY(3deg);
-    border-radius: 10px;
 }
 
-.pink-background {
-    background: linear-gradient(180deg,
-        rgba(247, 199, 255, 1) 0%,
-        rgba(247, 199, 255, 1) 60%,
-        rgba(199, 247, 255, 1) 90%,
-        rgba(199, 247, 255, 1) 100%);
-}
 
 @media (max-width: 1024px) {
-    .untitled-content {
+    .untitled-container {
         padding-inline: 20px;
     }
-    .untitled-content img, .untitled-text {
+    .untitled-container img, .untitled-text {
         align-self: center;
         text-align: center;
     }
 }
 
 @media (max-width: 768px) {
-    .untitled-content img, .untitled-text {
+    .untitled-container img, .untitled-text {
         align-self: center;
         transform: skewY(0deg);
     }
@@ -100,10 +83,6 @@
         margin-top: 100px;
     }
     .untitled-container {
-        height: auto;
-        margin-top: -10px;
-    }
-    .untitled-content {
         height: auto;
         margin-top: 0;
         transform: skewY(0deg);
@@ -114,7 +93,7 @@
     .soon h1 {
         font-size: 80px;
     }
-    .untitled-content img {
+    .untitled-container img {
         margin-block: 50px;
     }
     .untitled-text {

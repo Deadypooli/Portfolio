@@ -1,13 +1,12 @@
 <template>
 	<header class="header">
 		<a href="/" class="mobile-nav">
-			<!-- <img src="../logo/logo.svg" class="header-svg"> -->
 			Neofy
 		</a>
 		<div
 		class="mobile-nav"
 		@click="toggleMenu">
-			<img src="../logo/bars.svg" class="header-svg">
+			<img src="../logo/white-bars.svg" class="header-svg">
 		</div>
 		<div
 		:class="{'hidden-nav': menuHidden}"
@@ -15,15 +14,9 @@
 			<div class="pages">
 				<div class="logo-desktop">
 					<a href="/">
-						<!-- <img src="../logo/logo.svg" class="header-svg"> -->
 						Neofy
 					</a>
 				</div>
-				<!-- <div class="page-link">
-					<a href="/personal">
-						Personal Art
-					</a>
-				</div> -->
 				<div class="page-link">
 					<a href="/bananaDrama">
 						Banana Drama
@@ -34,18 +27,15 @@
 						Untitled Project
 					</a>
 				</div>
-				<!-- <div class="page-link">
-					<a href="/asphira">
-						Asphira
-					</a>
-				</div> -->
 			</div>
 			<div class="info">
-				<a class="page-link" href="/neofyInfo">
-					Neofy Info
-				</a>
+				<div class="page-link">
+					<a href="/neofyInfo">
+						Neofy Info
+					</a>
+				</div>
 				<a class="page-link" href="https://www.instagram.com/ne0fy/" target="_blank">
-					<img src="../logo/insta.svg" class="header-svg">
+					<img src="../logo/white-insta.svg" class="header-svg">
 				</a>
 			</div>
 		</div>

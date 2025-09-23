@@ -1,26 +1,28 @@
 * {
 	box-sizing: border-box;
-	// color: #fff;
+	color: #fff;
 }
 a, a:hover, a:focus, a:active {
 	text-decoration: none;
 	color: inherit;
 }
 body {
-	font-family: 'Futura', Helvetica, Arial;
-	font-size: 20px;
+	font-family: 'Comfortaa', Helvetica, Arial;
+	font-size: 18px;
 	margin: 0;
-	background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgb(199, 247, 255) 100%);
+	background-color: #bbcfff;
 	overflow: overlay;
-	color: #290331;
+	// color: #3a3a4c;
 }
 
 h1 {
-	font-size: 256px;
+	font-size: 200px;
+	font-weight: bolder;
 }
 
 h2 {
-	font-size: 128px;
+	font-size: 100px;
+	font-weight: bolder;
 }
 
 h1, p {
@@ -51,17 +53,6 @@ h1, p {
 }
 
 @media screen and (max-width: 768px) {
-	h1 {
-		font-size: 128px;
-	}
-
-	h2 {
-		font-size: 64px;
-	}
-}
-
-
-@media (max-width: 425px) {
 	h1 {
 		font-size: 100px;
 	}

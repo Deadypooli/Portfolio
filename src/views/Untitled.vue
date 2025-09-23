@@ -12,14 +12,12 @@
     </video>
   </div>
   <div class="untitled-container">
-    <div class="untitled-content">
-      <div class="untitled-text">
-        <h2>
-          Arriving soon...
-        </h2>
-      </div>
-      <img :src="img">
+    <div class="untitled-text">
+      <h2>
+        Arriving soon...
+      </h2>
     </div>
+    <img :src="img">
   </div>
 </template>
 
@@ -36,12 +34,6 @@ export default {
       vid: require('@/img/untitled/0000-1410.mp4'),
       img: require('@/img/untitled/car-image.png'),
     };
-  },
-  mounted() {
-    document.body.classList.add('pink-background');
-  },
-  beforeUnmount() {
-    document.body.classList.remove('pink-background');
   }
 };
 </script>

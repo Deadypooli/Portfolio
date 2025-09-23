@@ -9,6 +9,12 @@
 .gallery-image {
   display: block;
   object-fit: cover;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.gallery-image:hover {
+  scale: 1.05;
 }
 
 .text-block {
@@ -16,4 +22,11 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  line-height: 200px;
+}
+
+@media (max-width: 768px) {
+  .gallery-image:hover {
+    scale: none;
+  }
 }

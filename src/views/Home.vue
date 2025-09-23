@@ -127,7 +127,6 @@ export default {
           if (this.containerWidth < 1024) {
             rowItems = rowItems.slice(1, 2);
           }
-          console.log(rowItems);
           
           this.rows.push(this.generateRow(rowItems, this.containerWidth));
           this.rowCount++;

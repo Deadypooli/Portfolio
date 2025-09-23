@@ -17,11 +17,15 @@
             <img
             class="banana-peek" 
             :src="tigerPeek">
-            <!-- Banana Drama is a RTS game on steam and the first game I got to work on. It was a lot of fun for me. -->
-            <!-- I really liked being creative and design fun animal characters, that players can actually play. -->
         </div>
     </div>
     <div class="banana-container">
+        <div class="banana-description">
+            Banana Drama is a free and independent RTS game.
+            It offers a singleplayer and online multiplayer experience.
+            <br>
+            It is the first game I got to work on.
+        </div>
         <div 
         v-for="(animal, index) in animalsArray"
         :key="animal"

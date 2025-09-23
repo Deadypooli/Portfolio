@@ -4,14 +4,14 @@
 	width: 100%;
 	padding: 20px;
 	z-index: 50;
-	backdrop-filter: blur(10px);
-	background-color: rgba(247, 199, 255, .6);
+	background-color: #c8b6ff;
 }
 
 .mobile-nav {
 	display: none;
 	margin-inline: 20px;
 	z-index: 20;
+	background-color: #c8b6ff;
 }
 
 .nav {
@@ -31,6 +31,7 @@
 
 .pages, .info {
 	display: flex;
+	align-items: center;
 }
 
 .page-link, .logo-desktop {
@@ -56,6 +57,10 @@
 		padding-left: 10px;
 	}
 	
+	.page-link {
+		margin-bottom: 10px;
+	}
+
 	.mobile-nav {
 		display: block;
 	}
@@ -63,7 +68,7 @@
 	.hidden-nav {
 		display: flex;
 		backdrop-filter: blur(10px);
-		background: linear-gradient(180deg,rgba(247, 199, 255, 1) 0%, rgba(199, 255, 254, 1) 100%);
+		background-color: #c8b6ff;
 	}
 
 	.pages {
@@ -74,7 +79,9 @@
 	.logo-desktop {
 		display: none;
 	}
-
+	// _::-webkit-full-page-media, _:future, :root .safari_only {
+    //     color: red;
+    // }
 	.info {
 		margin-bottom: 50px;
 	}

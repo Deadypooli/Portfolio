@@ -5,8 +5,8 @@
 
 <style>
 @font-face {
-  font-family: "Futura";
-  src: local("Futura"),
-   url(./fonts/FuturaCyrillicBook.ttf) format("truetype");
+  font-family: "Comfortaa";
+  src: local("Comfortaa"),
+   url(./fonts/Comfortaa-VariableFont_wght.ttf) format("truetype");
 }
 </style>
