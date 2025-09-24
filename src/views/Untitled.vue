@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       vid: require('@/img/untitled/0000-1410.mp4'),
-      img: require('@/img/untitled/car-image.png'),
+      img: require('@/img/untitled/car-image.jpg'),
     };
   }
 };
