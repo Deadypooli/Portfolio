@@ -51,12 +51,13 @@ export default {
       TARGET_ROW_HEIGHT: 300,
       containerWidth: 0,
       allItems: [],
+      lastWindowWidth: window.innerWidth,
     };
   },
   mounted() {
     this.importAll(require.context('@/img/personal/', true));
     this.buildRows();
-    window.addEventListener('resize', this.buildRows);
+    window.addEventListener('resize', this.handleResize);
   },
   methods: {
     importAll(r) {
@@ -146,10 +147,18 @@ export default {
       if (currentRow.length) {
         this.rows.push(this.generateRow(currentRow, this.containerWidth));
       }
+    },
+    handleResize() {
+      let currentWidth = window.innerWidth;
+      
+      if (currentWidth !== this.lastWindowWidth) {
+        this.lastWindowWidth = currentWidth;
+        this.buildRows();
+    }
     }
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.buildRows);
+    window.removeEventListener('resize', this.handleResize);
   },
 };
 </script>
