@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "atob": "^2.1.2",
+    "baseline-browser-mapping": "^2.9.11",
     "body-parser": "*",
+    "caniuse-lite": "^1.0.30001761",
     "core-js": "^3.6.5",
     "dotenv": "^16.0.0",
     "dropbox": "^10.24.0",
@@ -53,5 +55,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "packageManager": "yarn@4.12.0"
 }
