@@ -1,25 +1,26 @@
 <template>
     <Header />
     <div class="info-text">
-        <h2>Hello!</h2>
-        <p>I'm a 25-year-old freelance artist driven by a lifelong passion for visual storytelling.</p>
-        <p>My creative journey reaches between 2D illustration and concept art, as well as 3D modeling and animation.</p>
+        <h2>Hello</h2>
+        <p>I’m a young 3D Artist.</p>
+        <p>I’m someone who is generally interested in how things look, feel and function.
+            I am focused on design in many or almost all aspects of life.</p>
         <br>
-        <p>I thrive on bringing imaginative concepts to life through vibrant visuals and dynamic motion.</p>
+        <p>When it comes to animation I am amazed how inspiring it can make one feel.
+            How it can bring up emotions and tell stories with deep meanings.</p>
+            <br>
         <p>
-            I'm currently immersed in the exciting process of creating my own short animated film using Blender,
-            a project that allows me to fully explore my skills and vision.
+            At the moment, I’m working on my own short animated project in Blender,
+            which gives me the possibility to explore my creativity, ideas, and character-driven storytelling.
+            In the past, I’ve also worked on the Steam game Banana Drama, including modeling and animation.
         </p>
         <br>
         <p>
-            My experience also includes character modeling and animation for the Steam game 'Banana Drama',
-            where I contributed to crafting engaging and memorable characters.
+            Over time, art has changed from what i just did in class or at home experimenting to a full passion.
+            I work very organized with a focus on detail and a clean look.
         </p>
-        <p>While I've always been drawn to art, the past few years have seen it evolve from a hobby to my central focus.</p>
         <br>
-        <p>I'm eager to collaborate on diverse projects, offering my skills for contracts and commissions.</p>
-        <p>I'm particularly interested in opportunities that allow me to contribute my unique style and technical abilities to bring creative visions to life.</p>
-        <p>I'm excited to connect and explore how my artistic skills can serve your project.</p>
+        <p>I am always open for new contacts, just write me an Email.</p>
         <br>
         <a href="mailto:neofy.artist@gmail.com">neofy.artist@gmail.com</a>
     </div>

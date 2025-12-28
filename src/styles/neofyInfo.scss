@@ -3,11 +3,13 @@
     margin-inline: auto;
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 150px;
 }
 
 
 @media (max-width: 768px) {
     .info-text {
         margin-inline: 20px;
+        margin-top: 100px;
     }
 }
