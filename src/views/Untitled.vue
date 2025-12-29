@@ -1,6 +1,11 @@
 <template>
   <Header />
-  <div class="video-container">
+  <div class="untitled-image" :style="{backgroundImage: 'url(' + img + ')' }">
+        <!-- <h1 class="untitled-text">
+            <span>N</span><span>E</span><span>O</span><span>F</span><span>Y</span>
+        </h1> -->
+    </div>
+  <!-- <div class="video-container">
     <div class="video-text">
       <h1>
         SOON
@@ -18,7 +23,7 @@
       </h2>
     </div>
     <img :src="img">
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -32,7 +37,7 @@ export default {
   data() {
     return {
       vid: require('@/img/untitled/0000-1410.mp4'),
-      img: require('@/img/untitled/car-image.jpg'),
+      img: require('@/img/untitled/Car.webp'),
     };
   }
 };
