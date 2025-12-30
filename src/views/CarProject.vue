@@ -1,10 +1,10 @@
 <template>
   <Header />
-  <div class="untitled-image" :style="{backgroundImage: 'url(' + img + ')' }">
-        <!-- <h1 class="untitled-text">
-            <span>N</span><span>E</span><span>O</span><span>F</span><span>Y</span>
-        </h1> -->
-    </div>
+  <img :src="imgFront" class="untitled-image">
+  <img :src="img" class="untitled-image">
+  <img :src="imgSide" class="untitled-image">
+  <img :src="imgBack" class="untitled-image">
+  <img :src="imgTop" class="untitled-image">
   <!-- <div class="video-container">
     <div class="video-text">
       <h1>
@@ -36,8 +36,12 @@ export default {
   },
   data() {
     return {
-      vid: require('@/img/untitled/0000-1410.mp4'),
+      // vid: require('@/img/untitled/0000-1410.mp4'),
       img: require('@/img/untitled/Car.webp'),
+      imgFront: require('@/img/untitled/Car-front.webp'),
+      imgBack: require('@/img/untitled/Car-back.webp'),
+      imgSide: require('@/img/untitled/Car-side.webp'),
+      imgTop: require('@/img/untitled/Car-top.webp'),
     };
   }
 };

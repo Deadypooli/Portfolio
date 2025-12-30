@@ -12,9 +12,9 @@ const routes = [
     component: () => import('../views/BananaDrama.vue')
   },
   {
-    path: '/untitled',
-    name: 'Untitled',
-    component: () => import('../views/Untitled.vue')
+    path: '/car-project',
+    name: 'CarProject',
+    component: () => import('../views/CarProject.vue')
   },
   {
     path: '/neofyInfo',

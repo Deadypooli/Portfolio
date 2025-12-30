@@ -96,12 +96,11 @@
 
 .untitled-image {
     width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
 }
 
 .untitled-text {
@@ -115,10 +114,4 @@
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.8));
     background-clip: text;
     color: transparent;
-}
-
-@media (max-width: 768px) {
-    .untitled-image {
-        background-position: 20% center;
-    }
 }

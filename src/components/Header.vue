@@ -23,8 +23,8 @@
 					</a>
 				</div>
 				<div class="page-link">
-					<a href="/untitled">
-						Untitled Project
+					<a href="/car-project">
+						Car Project
 					</a>
 				</div>
 			</div>
