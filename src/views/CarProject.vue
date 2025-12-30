@@ -1,10 +1,10 @@
 <template>
   <Header />
-  <img :src="imgFront" class="untitled-image">
-  <img :src="img" class="untitled-image">
-  <img :src="imgSide" class="untitled-image">
-  <img :src="imgBack" class="untitled-image">
-  <img :src="imgTop" class="untitled-image">
+  <img :src="imgFront" class="car-image">
+  <img :src="img" class="car-image">
+  <img :src="imgSide" class="car-image">
+  <img :src="imgBack" class="car-image">
+  <img :src="imgTop" class="car-image">
   <!-- <div class="video-container">
     <div class="video-text">
       <h1>
@@ -16,8 +16,8 @@
       Your browser does not support the video tag.
     </video>
   </div>
-  <div class="untitled-container">
-    <div class="untitled-text">
+  <div class="car-container">
+    <div class="car-text">
       <h2>
         Arriving soon
       </h2>
@@ -36,12 +36,12 @@ export default {
   },
   data() {
     return {
-      // vid: require('@/img/untitled/0000-1410.mp4'),
-      img: require('@/img/untitled/Car.webp'),
-      imgFront: require('@/img/untitled/Car-front.webp'),
-      imgBack: require('@/img/untitled/Car-back.webp'),
-      imgSide: require('@/img/untitled/Car-side.webp'),
-      imgTop: require('@/img/untitled/Car-top.webp'),
+      // vid: require('@/img/car/0000-1410.mp4'),
+      img: require('@/img/car/Car.webp'),
+      imgFront: require('@/img/car/Car-front.webp'),
+      imgBack: require('@/img/car/Car-back.webp'),
+      imgSide: require('@/img/car/Car-side.webp'),
+      imgTop: require('@/img/car/Car-top.webp'),
     };
   }
 };

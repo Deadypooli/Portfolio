@@ -5,8 +5,8 @@
 
 <style>
 @font-face {
-  font-family: "Comfortaa";
-  src: local("Comfortaa"),
-   url(./fonts/Comfortaa-VariableFont_wght.ttf) format("truetype");
+  font-family: "Satoshi";
+  src: local("Satoshi"),
+   url(./fonts/Satoshi-Light.ttf) format("truetype");
 }
 </style>

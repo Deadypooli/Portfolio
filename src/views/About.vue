@@ -31,6 +31,6 @@
 
     export default {
         components: { Header },
-        name: 'NeofyInfo',
+        name: 'About',
     };
 </script>

@@ -30,8 +30,8 @@
 			</div>
 			<div class="info">
 				<div class="page-link">
-					<a href="/neofyInfo">
-						Neofy Info
+					<a href="/about">
+						About Me
 					</a>
 				</div>
 				<a class="page-link" href="https://www.instagram.com/ne0fy/" target="_blank">

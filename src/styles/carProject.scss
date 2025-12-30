@@ -94,7 +94,7 @@
 
 
 
-.untitled-image {
+.car-image {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -103,15 +103,23 @@
     object-fit: cover;
 }
 
-.untitled-text {
+.car-text {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.untitled-text span {
+.car-text span {
     display: inline-block;
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.8));
     background-clip: text;
     color: transparent;
+}
+
+
+@media (max-width: 1024px) {
+    .car-image:first-of-type {
+        padding-top: 66px;
+        background-color: #000;
+    }
 }
