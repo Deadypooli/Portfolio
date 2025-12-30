@@ -1,6 +1,22 @@
 <template>
     <Header />
-    <div class="banana-hero-container">
+    <div class="banana-image" :style="{backgroundImage: 'url(' + heroImg + ')' }">
+        <div class="banana-text">
+            <h1>
+                Banana Drama
+            </h1>
+            <p>
+                RTS game · Steam
+            </p>
+            <p>
+                by artifact design
+            </p>
+            <h3>
+                DLC Character modeling and animation
+            </h3>
+        </div>
+    </div>
+    <!-- <div class="banana-hero-container">
         <div class="banana-hero">
             <div class="banana-hero-header">
                 <h1>
@@ -36,7 +52,7 @@
             </div>
             <img :src="animal">
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
@@ -47,25 +63,26 @@
         name: 'BananaDrama',
         data() {
             return {
-                cowDance: require('@/img/bananaDrama/cow.gif'),
-                tigerPeek: require('@/img/bananaDrama/tiger-peek.png'),
-                animalsArray: [],
-                namesArray: [
-                    'The Cockatoo',
-                    'The Cow',
-                    'The Giraffe',
-                    'The Lion',
-                    'The Tiger',
-                ]
+                heroImg: require('@/img/bananaDrama/Banana-hero.webp'),
+                // cowDance: require('@/img/bananaDrama/cow.gif'),
+                // tigerPeek: require('@/img/bananaDrama/tiger-peek.png'),
+                // animalsArray: [],
+                // namesArray: [
+                //     'The Cockatoo',
+                //     'The Cow',
+                //     'The Giraffe',
+                //     'The Lion',
+                //     'The Tiger',
+                // ]
             };
         },
         mounted () {
-            this.importAll(require.context('@/img/bananaDrama/turns/', true));
+            // this.importAll(require.context('@/img/bananaDrama/turns/', true));
         },
         methods: {
-            importAll(r) {
-                r.keys().forEach(key => (this.animalsArray.push(r(key))));  
-            },
+            // importAll(r) {
+            //     r.keys().forEach(key => (this.animalsArray.push(r(key))));  
+            // },
         }
     };
 </script>
