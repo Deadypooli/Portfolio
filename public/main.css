@@ -241,12 +241,11 @@ h1, h2, p {
   }
   .hidden-nav {
     transform: translateX(0);
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .pages {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 56px;
   }
   .logo-desktop {
     display: none;
