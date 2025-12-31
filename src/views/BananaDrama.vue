@@ -16,6 +16,12 @@
             </h3>
         </div>
     </div>
+    <div 
+        v-for="(animal) in animalsArray"
+        :key="animal"
+        class="banana-turn">
+            <img :src="animal">
+        </div>
     <!-- <div class="banana-hero-container">
         <div class="banana-hero">
             <div class="banana-hero-header">
@@ -66,7 +72,7 @@
                 heroImg: require('@/img/bananaDrama/Banana-hero.webp'),
                 // cowDance: require('@/img/bananaDrama/cow.gif'),
                 // tigerPeek: require('@/img/bananaDrama/tiger-peek.png'),
-                // animalsArray: [],
+                animalsArray: [],
                 // namesArray: [
                 //     'The Cockatoo',
                 //     'The Cow',
@@ -77,12 +83,12 @@
             };
         },
         mounted () {
-            // this.importAll(require.context('@/img/bananaDrama/turns/', true));
+            this.importAll(require.context('@/img/bananaDrama/turns/', true));
         },
         methods: {
-            // importAll(r) {
-            //     r.keys().forEach(key => (this.animalsArray.push(r(key))));  
-            // },
+            importAll(r) {
+                r.keys().forEach(key => (this.animalsArray.push(r(key))));  
+            },
         }
     };
 </script>
