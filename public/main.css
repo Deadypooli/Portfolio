@@ -63,7 +63,7 @@ h1, h2, p {
     font-size: 5rem;
   }
 }
-.banana-image {
+.banana-hero {
   width: 100%;
   height: 100vh;
   background-position: center;
@@ -93,6 +93,21 @@ h1, h2, p {
   font-weight: 400;
 }
 
+.banana-images {
+  display: flex;
+  max-width: 1440px;
+  max-height: 100vh;
+  justify-content: center;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.banana-images img {
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .banana-turn img {
   margin-top: 100px;
   max-width: 100%;
@@ -115,6 +130,20 @@ h1, h2, p {
   margin-bottom: 100px;
 }
 
+.vid-container {
+  max-width: 1440px;
+  margin-inline: auto;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  padding-inline: 30px;
+}
+
+.banana-video {
+  border-radius: 10px;
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   .banana-text {
     padding-inline: 20px;
@@ -124,9 +153,15 @@ h1, h2, p {
   .banana-text h1 {
     line-height: 10rem;
   }
+  .vid-container {
+    padding-inline: 0;
+  }
+  .banana-video {
+    border-radius: 0;
+  }
 }
 @media (max-width: 768px) {
-  .banana-image {
+  .banana-hero {
     background-position: 76% center;
     align-items: end;
   }

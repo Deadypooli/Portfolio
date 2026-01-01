@@ -1,6 +1,6 @@
 <template>
     <Header />
-    <div class="banana-image" :style="{backgroundImage: 'url(' + heroImg + ')' }">
+    <div class="banana-hero" :style="{backgroundImage: 'url(' + heroImg + ')' }">
         <div class="banana-text">
             <h1>
                 Banana Drama
@@ -16,11 +16,18 @@
             </h3>
         </div>
     </div>
-    <div 
-        v-for="(animal) in animalsArray"
+        <div 
+        v-for="(animal) in imgArray"
         :key="animal"
-        class="banana-turn">
-            <img :src="animal">
+        class="banana-images">
+            <img :src="animal[0]">
+            <img :src="animal[1]">
+        </div>
+        <div class="vid-container">
+            <video class="banana-video" autoplay muted loop playsinline>
+                <source :src="vid" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     <!-- <div class="banana-hero-container">
         <div class="banana-hero">
@@ -70,9 +77,32 @@
         data() {
             return {
                 heroImg: require('@/img/bananaDrama/Banana-hero.webp'),
+                vid: require('@/img/bananaDrama/tiger-cleaning.mp4'),
                 // cowDance: require('@/img/bananaDrama/cow.gif'),
                 // tigerPeek: require('@/img/bananaDrama/tiger-peek.png'),
                 animalsArray: [],
+                imgArray: [
+                    [
+                        require('@/img/bananaDrama/cockatoo-front.webp'),
+                        require('@/img/bananaDrama/cockatoo-side.webp')
+                    ],
+                    [
+                        require('@/img/bananaDrama/cow-front.webp'),
+                        require('@/img/bananaDrama/cow-side.webp')
+                    ],
+                    [
+                        require('@/img/bananaDrama/giraffe-front.webp'),
+                        require('@/img/bananaDrama/giraffe-side.webp')
+                    ],
+                    [
+                        require('@/img/bananaDrama/lion-front.webp'),
+                        require('@/img/bananaDrama/lion-side.webp')
+                    ],
+                    [
+                        require('@/img/bananaDrama/tiger-front.webp'),
+                        require('@/img/bananaDrama/tiger-side.webp')
+                    ],
+                ]
                 // namesArray: [
                 //     'The Cockatoo',
                 //     'The Cow',
