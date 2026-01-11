@@ -17,7 +17,8 @@ export default {
   },
   data() {
     return {
-      img: require('@/img/personal/skye-hero.webp'),
+      img: require('@/img/personal/Skye-Wallpaper.webp'),
+      // img: require('@/img/personal/skye-hero.webp'),
     };
   }
 };
