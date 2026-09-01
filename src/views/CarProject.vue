@@ -1,7 +1,7 @@
 <template>
   <Header />
-  <img :src="imgFront" class="car-image">
   <img :src="img" class="car-image">
+  <img :src="imgFront" class="car-image">
   <img :src="imgSide" class="car-image">
   <img :src="imgBack" class="car-image">
   <img :src="imgTop" class="car-image">
@@ -11,17 +11,17 @@
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'Untitled',
+  name: 'Proto0',
   components: {
     Header,
   },
   data() {
     return {
-      img: require('@/img/car/Car.webp'),
-      imgFront: require('@/img/car/Car-front.webp'),
-      imgBack: require('@/img/car/Car-back.webp'),
-      imgSide: require('@/img/car/Car-side.webp'),
-      imgTop: require('@/img/car/Car-top.webp'),
+      img: require('@/img/car/new-car-45.webp'),
+      imgFront: require('@/img/car/new-car-front.webp'),
+      imgBack: require('@/img/car/new-car-back.webp'),
+      imgSide: require('@/img/car/new-car-side.webp'),
+      imgTop: require('@/img/car/new-car-top.webp'),
     };
   }
 };

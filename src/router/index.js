@@ -17,8 +17,8 @@ const routes = [
     component: () => import('../views/MagicMunich.vue')
   },
   {
-    path: '/car-project',
-    name: 'CarProject',
+    path: '/proto-0',
+    name: 'Proto0',
     component: () => import('../views/CarProject.vue')
   },
   {
