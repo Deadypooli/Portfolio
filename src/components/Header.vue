@@ -23,6 +23,11 @@
 					</a>
 				</div>
 				<div class="page-link">
+					<a href="/magic-munich">
+						Magical Munich
+					</a>
+				</div>
+				<div class="page-link">
 					<a href="/car-project">
 						Car Project
 					</a>

@@ -286,6 +286,49 @@ h1, h2, p {
     background-color: #000;
   }
 }
+.munich-hero {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-top: 66px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.munich-text {
+  padding-inline: 66px;
+  padding-block: 40px;
+  text-align: center;
+}
+
+.munich-text h1 {
+  margin-left: -10px;
+  line-height: 8rem;
+  margin-bottom: 45px;
+}
+
+.munich-text-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .munich-text h1 {
+    line-height: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .munich-text h1 {
+    line-height: 6rem;
+  }
+  .munich-text-desktop {
+    display: none;
+  }
+  .munich-text-mobile {
+    display: block;
+  }
+}
 .info-text {
   max-width: 700px;
   margin-inline: auto;

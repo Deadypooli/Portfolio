@@ -12,6 +12,11 @@ const routes = [
     component: () => import('../views/BananaDrama.vue')
   },
   {
+    path: '/magic-munich',
+    name: 'MagicMunich',
+    component: () => import('../views/MagicMunich.vue')
+  },
+  {
     path: '/car-project',
     name: 'CarProject',
     component: () => import('../views/CarProject.vue')
