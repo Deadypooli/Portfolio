@@ -39,7 +39,7 @@
 						About Me
 					</a>
 				</div>
-				<a class="page-link" href="https://www.artstation.com/deadypooli" target="_blank">
+				<a class="page-link" href="https://www.artstation.com/neofy" target="_blank">
 					<img src="../logo/white-artstation.svg" class="header-svg">
 				</a>
 				<a class="page-link" href="https://www.instagram.com/ne0fy/" target="_blank">
